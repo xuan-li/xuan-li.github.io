@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Group Theory |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/group-theory/">Group Theory</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Dec 24, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h2 id="1-definitions">1. Definitions</h2>
+<p><strong>Definition 1.1 (Group)</strong>
+<em>A group is a set $G$ with an composition $\cdot : G\times G\rightarrow G$, where $(G, \cdot)$ satisfies:</em><!-- raw HTML omitted -->
+<strong>Associativity:</strong> $\forall a,b \in G, (a\cdot b)\cdot c = a \cdot(b \cdot c)$<!-- raw HTML omitted -->
+<strong>Identity element:</strong> <em>There exist an element $e \in G$, such that $\forall a\in G, ea = ae = a.$</em><!-- raw HTML omitted -->
+<strong>Inverse element:</strong> <em>$\forall a \in G$, there exists an element $a^{-1}\in G$, s.t. $aa^{-1} = a^{-1}a= e$</em>.</p>
+<p>We usually denote $(G, \cdot)$ simply as $G$. And the three condition we usually call group axioms.</p>
+<pre><code>The identity and inverse is automatically unique by definition.
+</code></pre><p>If the composition of a group is commutative, we call it an Abelian group:</p>
+<p><strong>Definition 1.2(Abelian Group)</strong>
+<em>An abelian group $(G, +)$ is a group which satisfy commutativity of addition:$$\forall a,b\in G, a+b = b+a$$
+Its identity is usually denoted as $0$ and the inverse of $a$ is denoted as $-a$.</em></p>
+<p>For example, $\mathbb{Z}^+$: Integers with addition, is a group and an Abelian group.</p>
+<p><strong>Definition 1.3.</strong> The order of an element $g$ of $G$ is defined as an integer $n$, such that $g^n = 1$.</p>
+<p>Note that some elements of $G$ may have infinite order, that is, $\forall n, g^n \not = 1$.</p>
+<h2 id="2-subgroups">2. Subgroups</h2>
+<p><strong>Definition 2.2 (Subgroup)</strong>
+A subset $H$ of a group $G$ is a subgroup of $G$ which has following properties:
+<strong>Closure:</strong> $\forall a, b \in H, ab\in H$.<!-- raw HTML omitted -->
+<strong>Identity:</strong> $e_G \in H$<!-- raw HTML omitted -->
+<strong>Inverse:</strong> $\forall a, a^{-1} \in H$</p>
+<p>$a\mathbb{Z} + b\mathbb{Z}$ is a subgroup of $\mathbb{Z}^+$, and this subgroup has a generator $d$, which is a positive integer s.t. $a\mathbb{Z} + b\mathbb{Z} = d\mathbb{Z}$. Specifically, $d = gcd(a,b).$</p>
+<p><strong>Definition 2.3 (Normal Subgroup)</strong>
+A subgroup $N$ of $G$ is called normal subgroup, if $$\forall a\in N, b\in G, bab^{-1} \in N,$$
+$bab^{-1}$ is called a conjugate of $a$.</p>
+<h2 id="3-homomorphisms-between-groups">3. Homomorphisms Between Groups</h2>
+<p><strong>Defintion 3.1</strong>
+Let $G, G'$ be groups, a homomorphism $\phi: G\rightarrow G'$ is any map satisfying the rule: $$\phi(ab) = \phi(a)\phi(b),\forall a,b\in G$$</p>
+<p>That is, homomorphisms preserve group multiplications.</p>
+<p><strong>Propersition 3.2</strong>
+$$\phi(1_G) = \phi(1 _{G'})$$
+$$\phi(a^{-1}) = \phi(a)^{-1}, \forall a\in G$$</p>
+<p><strong>Propersition 3.3</strong>
+The kernal of a homomorphism $\phi: G\rightarrow G'$, which is defined as $\ker \phi = \{a \in G:\phi(a) = 1_{G'}\}$ is a normal subgroup of $G$.<!-- raw HTML omitted -->
+*Proof.* $\phi(bab^{-1}) = \phi(b)\phi(a)\phi(b^{-1}) = 1 _{G'}$.</p>
+<p><strong>Definition 3.4</strong>
+If a homomorphism $\phi: G\rightarrow G'$ is called a isomorphism if it is bijective and $\phi^{-1}$ is a homomorphism from $G'$ to $G$. $G$ and $G'$ are isomorphic.</p>
+<p><strong>Propersition 3.5</strong>
+A homomorphism $\phi:G \rightarrow G'$ is injective if and only if its kernel is trivial.</p>
+<h2 id="4-cosets-and-quotient-groups">4. Cosets and Quotient Groups.</h2>
+<p><strong>Definition 4.1.</strong> Let $G$ be a group and $H$ be a subgroup of $G$. For any $a\in G$, $aH = \{ah|h\in H\}$ is defined as a left coset for $H$ of $G$.</p>
+<p>Now we define a equivalent relation:
+$ a\equiv b$ if and only if $\exists h\in H,\ s.t.\ a = bh$. Then we can see that $aH = bH$, since $ab^{-1} \in H$. This means that all elements in one coset belongs to the same equivalent class.</p>
+<p>This equivalent relation gives a partition to group $G$. And each part is a coset. So we have the following proposition:</p>
+<p><strong>Proposition 4.2.</strong> Cosets for $H$ of $G$ partition $G$.</p>
+<p>The number of cosets for $H$ is called the index of $H$ in $G$, which is denoted as $[G:H]$. Then we can easily see:</p>
+<p><strong>Proposition 4.3.</strong> $|G| = |H|[G:H]$</p>
+<p>Another useful proposition is:</p>
+<p><strong>Corollory 4.4.</strong> If $G$ is a finite group, then for every subgroup $H$, $|H|$ is a factor of $|G|$. Especially, the order of each element is a factor of $|G|$.</p>
+<p>We know that $\ker\phi$ is a subgroup of $G$, where $\phi: G\rightarrow G'$. If $a\ker\phi = b \ker\phi$, then $a^{-1}b\in \ker\phi$, which means $\phi(a)=\phi(b).$
+So we have the following proposition:</p>
+<p><strong>Proposition 4.5.</strong> $[G:\ker \phi] = |\text{im } \phi|, |G| = |\ker \phi|\cdot|\text{im }\phi|$</p>
+<p>Now we focus on normal subgroups. Normal subgroups has a very good property:</p>
+<p><strong>Proposition 4.6.</strong> If $N$ is a normal group of $G$, then $(aN)(bN) = abN$.</p>
+<p>Here $AB := \{ab|a\in A, b\in B\}$.</p>
+<p><em>Proof.</em> Since $aN = Na$, $(aN)(bN) = abNN = abN$.</p>
+<p>This property allows us to define multiplication of two cosets. A question is whether all cosets form a group? The following theorem answers this question:</p>
+<p><strong>Theorem 4.7.</strong> If $N$ is a normal group of $G$, then $\bar{G} = G/N = \{aN| a\in G\}$ forms a group. $\pi: G\rightarrow \bar{G}$ defined by $\pi(a) = aN$ is a homomorphism. And $\ker \pi = N$.</p>
+<p>This group is called a quotient group.</p>
+<p>For arbitrary surjective homomorphisms, we have the following property:</p>
+<p><strong>Theorem 4.8 (First Isomorphism Theorem).</strong> Let $\phi: G\rightarrow G'$ is a surjective homomorphism. Let $N = \ker \phi$. We define $\bar{\phi}: aN \rightarrow \phi(a)$. Then $\bar{\phi}$ is a isomorphism from $G/N$ to $G'$.</p>
+<p>A generalization of this theorem is as follows:</p>
+<p><strong>Proposition 4.9.</strong> Let $\phi: G\rightarrow G'$ be a homomorphism and $N$ is a normal subgroup of $G$ contained in $\ker \phi$. Then there is a unique homomorphism $\bar{\phi}$ from $G/N$ to $G'$ such that $\phi = \bar{\phi} \circ \pi$, where $\pi$ is the canonical map from $G$ to $G/N$. And $\bar{\phi}$ is defined as $\bar{\phi}(\bar{a}) = \phi(a)$.
+<img src="/img/posts/quotient_group.png" alt="quotient group"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a></li>
+        
+            <li><a href="/post/smooth-maps/">Smooth Maps</a></li>
+        
+            <li><a href="/post/properties-of-manifolds/">Properties of Manifolds</a></li>
+        
+            <li><a href="/post/chinese-remainder/">Chinese Remainder Theorem and Square Roots Under Modulo</a></li>
+        
+            <li><a href="/post/convergence-of-series/">Convergence of Series</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

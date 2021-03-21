@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/publication/</link>
+    <description>Recent content in Publications on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://xuan-li.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Soft Hybrid Aerial Vehicle via Bistable Mechanism</title>
+      <link>http://xuan-li.github.io/publication/hav/</link>
+      <pubDate>Tue, 02 Feb 2021 21:21:09 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/publication/hav/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lagrangian-Eulerian Multi-Density Topology Optimization with the Material Point Method</title>
+      <link>http://xuan-li.github.io/publication/topoopt/</link>
+      <pubDate>Sun, 03 Jan 2021 21:21:09 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/publication/topoopt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Polycube Shape Space</title>
+      <link>http://xuan-li.github.io/publication/polycube_space/</link>
+      <pubDate>Mon, 29 Jul 2019 15:53:49 -0700</pubDate>
+      
+      <guid>http://xuan-li.github.io/publication/polycube_space/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Conformal Mesh Parameterization using Discrete Calabi Flow</title>
+      <link>http://xuan-li.github.io/publication/calabiflow/</link>
+      <pubDate>Fri, 16 Mar 2018 16:15:17 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/publication/calabiflow/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

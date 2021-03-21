@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/post/</link>
+    <description>Recent content in Posts on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate><atom:link href="http://xuan-li.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Literature Review on Autoencoders</title>
+      <link>http://xuan-li.github.io/post/autoencoder_review/</link>
+      <pubDate>Fri, 11 May 2018 23:46:27 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/autoencoder_review/</guid>
+      <description>An overview on autoencoders</description>
+    </item>
+    
+    <item>
+      <title>Group Theory</title>
+      <link>http://xuan-li.github.io/post/group-theory/</link>
+      <pubDate>Sun, 24 Dec 2017 10:39:03 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/group-theory/</guid>
+      <description>A glance into group theory</description>
+    </item>
+    
+    <item>
+      <title>Differentials of Smooth Maps</title>
+      <link>http://xuan-li.github.io/post/differentials-of-smooth-maps/</link>
+      <pubDate>Wed, 20 Dec 2017 21:18:21 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/differentials-of-smooth-maps/</guid>
+      <description>Properties and theorems of differentials of smooth maps between manifolds</description>
+    </item>
+    
+    <item>
+      <title>Smooth Maps</title>
+      <link>http://xuan-li.github.io/post/smooth-maps/</link>
+      <pubDate>Tue, 19 Dec 2017 23:21:59 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/smooth-maps/</guid>
+      <description>Properties of smooth maps between manifolds and proof of the existence of partitions of unity</description>
+    </item>
+    
+    <item>
+      <title>Properties of Manifolds</title>
+      <link>http://xuan-li.github.io/post/properties-of-manifolds/</link>
+      <pubDate>Tue, 19 Dec 2017 21:30:09 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/properties-of-manifolds/</guid>
+      <description>Some basic properties of manifolds</description>
+    </item>
+    
+    <item>
+      <title>Chinese Remainder Theorem and Square Roots Under Modulo</title>
+      <link>http://xuan-li.github.io/post/chinese-remainder/</link>
+      <pubDate>Tue, 07 Nov 2017 17:17:24 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/chinese-remainder/</guid>
+      <description>Use Chinese remainder theorem to solve quadratic equation under modulo</description>
+    </item>
+    
+    <item>
+      <title>Convergence of Series</title>
+      <link>http://xuan-li.github.io/post/convergence-of-series/</link>
+      <pubDate>Sat, 07 Oct 2017 10:38:42 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/convergence-of-series/</guid>
+      <description>When is an infinite sum convergent?</description>
+    </item>
+    
+    <item>
+      <title>Sums</title>
+      <link>http://xuan-li.github.io/post/sums/</link>
+      <pubDate>Fri, 06 Oct 2017 12:09:03 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/sums/</guid>
+      <description>Some techniques to handle sums.</description>
+    </item>
+    
+    <item>
+      <title>Repertoire Method</title>
+      <link>http://xuan-li.github.io/post/repertoire-method/</link>
+      <pubDate>Thu, 05 Oct 2017 12:25:26 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/repertoire-method/</guid>
+      <description>This  method is an important method that appears in the textbook for CSE547 of solving recurences with constant parameters.</description>
+    </item>
+    
+    <item>
+      <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
+      <link>http://xuan-li.github.io/post/writing-content-with-markdown-latex-and-shortcodes/</link>
+      <pubDate>Sun, 17 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/writing-content-with-markdown-latex-and-shortcodes/</guid>
+      <description>&lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

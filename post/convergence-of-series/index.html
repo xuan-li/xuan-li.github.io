@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Convergence of Series |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/convergence-of-series/">Convergence of Series</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Oct 7, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <p>Given an infinite sum $S = \sum  _{k = 1}^\infty a _k$, we want to know whether this sum is convergent to a single number.</p>
+<hr>
+<h2 id="1-definitions-of-convergence">1. Definitions of convergence</h2>
+<p><strong>Definition 1.1</strong>
+<em>Given an infinite sequence ${a _0, a _1, a _2, &hellip;}$, we say the infinite series $S = \sum  _{k = 0}^\infty a _k$ is convergent, if its $n$th partial sum $S _n = \sum  _{k = 0} ^n a _k$ is a Cauchy sequence, that is, $$\forall \epsilon&gt;0, \exists N, \forall n&gt;N,|S-S _n|&lt;\epsilon.$$</em></p>
+<p>In this meaning, we can denote $$S = \lim _{n\rightarrow \infty} S _n$$</p>
+<p>Since $\mathbb{R}$ with standard Euclidean metric is a Banach space (every Cauchy sequence converges), so convergent sequence is equivalenct to Cauchy sequence. Using the definition for Cauchy sequence, the convergence of series can be writen as:</p>
+<p><strong>Definition 1.2 (Cauchy Series)</strong>
+<em>Given an infinite sequence ${a _0, a _1, a _2, &hellip;}$, we say the infinite series $S = \sum  _{k = 0}^\infty a _k$ is convergent, if $$\forall \epsilon&gt;0, \exists N, \forall m,n&gt;N,|S _n-S _m|&lt;\epsilon.$$</em></p>
+<hr>
+<h2 id="2-sufficient-conditions-for-convergence">2. Sufficient conditions for convergence.</h2>
+<p><strong>Theorem 2.1 (<!-- raw HTML omitted -->Comparison test<!-- raw HTML omitted -->)</strong>
+<em>$\sum  _{k = 0}^{\infty} a _k$ is convergent,
+if for all $n$, $a _n \ge 0$, and there exists a constant $M$, s.t. $\sum  _{k = 0}^{n} a _k &lt; M
+.$</em></p>
+<p><strong>Theorem 2.2 (<!-- raw HTML omitted -->Ratio test/Raabe&rsquo;s test<!-- raw HTML omitted -->)</strong>
+<em>$\sum  _{k = 0} ^\infty a _k$, where $a _n &gt; 0$ for all $n$, is convergent if $R = \lim  _{n\rightarrow \infty} \frac{a  _{n+1}}{a _n}&lt;1$, and divergent if $R &gt; 1$.</em></p>
+<p><strong>Theorem 2.3 (<!-- raw HTML omitted -->Root test<!-- raw HTML omitted -->)</strong>
+<em>$\sum  _{k = 0} ^\infty a _k$, where $a _n \ge 0$ for all $n$, is convergent if $R = {\lim\sup}  _{n\rightarrow \infty} \sqrt[n]{a _n}&lt;1$, and divergent if $R &gt; 1$.</em></p>
+<p><strong>Theorem 2.4 (<!-- raw HTML omitted -->Dirichlet&rsquo;s test<!-- raw HTML omitted -->)</strong>
+<em>If {$a _n$} and {$b _n$} satisfy,
+$$a  _{n+1} \le a _n$$
+$$\lim  _{n\rightarrow \infty} a _n = 0$$
+$$|\sum  _{k = 0}^N b _n| \le M, \forall N &gt; 0$$
+Then $\sum  _{k=0}^n a _n b _n$ converge.</em></p>
+<p><strong>Theorem 2.5 (<!-- raw HTML omitted -->Abel&rsquo;s test<!-- raw HTML omitted -->)</strong>
+<em>If {$a _n$} and {$b _n$} satisfy,
+$$\sum  _{k=0}^{\infty} a _n &lt; \infty$$
+$$b _n\ \text{is a monotone sequence}$$
+$$b _n \le M, \forall n\ge0$$
+Then $\sum  _{k=0}^n a _n b _n$ converge.</em></p>
+<hr>
+<h2 id="3-absolute-convergence-and-conditional-convergence">3. Absolute Convergence and Conditional Convergence</h2>
+<p><strong>Definition 3.1</strong>
+<em>Given a convergent series $\sum  _{k  =0}^\infty a _k &lt; \infty$, we say it is absolutely convergent if $\sum  _{k  =0}^\infty |a _k| &lt; \infty$. Otherwise we call it conditionally convergent.</em></p>
+<p>The limit of absolute convergence is invariant of permutation of its items.</p>
+<p><strong>Theorem 3.2</strong>
+<em>Let $\sum  _{k = 0}^\infty = A &lt; \infty$ and $\sum  _{k = 0} ^\infty |a _k| &lt; \infty$, then for any permutation $\sigma$, $\sum  _{k = 0}^\infty a  _{\sigma(k)} = A$</em></p>
+<p>But it is not true for conditional convergence. In fact, conditionally convergent series can permutated to get any real number! This is results from Riemann:</p>
+<p><strong>Theorem 3.3 (<!-- raw HTML omitted -->Riemann rearrangement theorem)<!-- raw HTML omitted --></strong>
+<em>Suppose $\{ a _k \}  _{k = 0}^{\infty}$ is a sequence of real number, and $\sum  _{k = 0}^\infty{a _k}$ conditionally converge. Then if $M$ is real number or $M = \infty$, there exists a permutation $\sigma$,
+such that $$\sum  _{k = 0}^{\infty} a  _{\sigma(k)} = M$$</em></p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/sums/">Sums</a></li>
+        
+            <li><a href="/post/repertoire-method/">Repertoire Method</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

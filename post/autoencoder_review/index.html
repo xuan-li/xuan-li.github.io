@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Literature Review on Autoencoders |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        May 11, 2018
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/machine-learning">Machine Learning</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h1 id="traditional-autoencoders-ae">Traditional Autoencoders (AE)</h1>
+<p>The <strong>traditional autoencoder (AE)</strong> framework consists of three layers,
+one for inputs, one for latent variables, and one for outputs. The clear
+definition of this framework first appeared in [Baldi1989NNP].</p>
+<p>The transformations between layers are defined explicitly:</p>
+<p>$$h = f  _\theta(x) = s_f(b+Wx)$$
+$$r = g  _\theta(h) = s _g(d+W&rsquo;h)$$</p>
+<p>where $h$ is the latent variable, $r$ is reconstucted data
+from the latent space, which belongs to the same space with the input
+$x$, $f _\theta$ is called the encoder, and $g _\theta$ is called the
+decoder, and $s _f$ and $s _g$ are two non-linear activation function.</p>
+<p>The training procedure is done by minimizing the reconstruction error
+using back-propagation:</p>
+<p>$$L  _{AE}(\theta) = \sum  _{t} L(x^{t}, g  _\theta(f  _\theta(x^{t})))$$</p>
+<p>where
+$\mathbf{X} =  {x^{1}, x^{2}, &hellip;, x^{n}}$ is the training dataset.</p>
+<p>This framework was initially proposed to achieve dimensionality
+reduction. [Baldi1989NNP] use linear autoencoder, that is, autoencoder
+without non-linearity, to compare with PCA, a well-known dimensionality
+reduction method.</p>
+<p>With the same purpose, [HinSal2006DR] proposed a <strong>deep autoencoder</strong>
+architecture, where the encoder and the decoder are multi-layer deep
+networks.</p>
+<p>Due to non-convexity of deep networks, they are easy to converge to poor
+local optima with random initialized weights. To solve this problem,
+[HinSal2006DR] used restricted Boltzmann machines (RBMs) to pre-train
+the model layer by layer before fine-tuning. <strong>This training technique
+can force each layer learn higher level representation of its previous
+layer</strong>, so as to get good initial weights for the original model. Since
+the training of traditional AEs are more straight-forward than RBMs and
+it has exact same form as a RBM, [Bengio2007SLA] used traditional AEs
+to pre-train each layer and got similar results.</p>
+<h1 id="sparse-encoders-bottleneck-vs-over-completeness">Sparse Encoders: Bottleneck v.s. Over-completeness</h1>
+<p>Only training on the construction error encourages the model simply
+learns an identity, then the output of the encoder may be a bad
+represetntation of the input. The traditional AE uses bottleneck
+structure, that is, $d _h &lt; d _x$ to prevent identities, which also means
+the bottleneck is necessary.</p>
+<p>Inspired by sparse coding [Foldiak1998SCP] in human&rsquo;s brain, the sparse
+representation was introduced. This kind of representations use
+over-complete latent space, that is, $d _h &gt; d _x$ [OLSHAUSEN19973311].
+Under this direction, some modifications of the traditional autoencoder
+was proposed to learn sparse representations
+[Ranzato2006ELS; Ranzato2007SFL]. Extra regularizations for sparsity
+was added in the object function, and we now call them <strong>sparse
+autoencoders (SAEs)</strong>. One of common used regularization term was
+studied in [Ng2011SAE]:</p>
+<p>$$L  _{SAE} (\theta) = L  _{AE} (\theta) + \lambda \sum  _{t}  \sum  _{j=1} ^{d _h} KL(\rho || h _j(x _t))$$</p>
+<p>where $\rho$ is the sparsity parameter, which is nearly zero, $h _j(x _t)$
+is the $j-th$ hidden unit&rsquo;s output at $x _t$ and
+$KL(\rho||h _j) = \rho \log\frac{\rho}{h _j} + (1-\rho)\log\frac{1-\rho}{1-h _j}$
+is the KL divergence between a Bernoulli random variable with mean
+$\rho$ and a Bernoulli random variable with mean $h _j$. This kind of
+penalty will encourage outputs of the hidden layer to be $\rho$.
+Expriments showed that sparse representations indeed learn useful and
+meaningful features, and SAEs are used in a lot of classification tasks
+[Xu2016SSAE; Tao2015SSAE], and are also used in feature tranfer
+learning [Deng2013SAE].</p>
+<h1 id="robust-representations">Robust Representations</h1>
+<p>[Vincent2010SDA] defined that a good represntation is one that can be
+obtained robustly from a corrupted input and that will be useful for
+recovering the corresponding clean input. They proposed <strong>denoising
+autoencoder (DAE)</strong>[Vincent2010SDA; Vincent2008ECR], which used a very
+different strategy of adding regularizations on inputs. The model is
+trained to reconstruct a &quot;repaired&quot; input from a corrupted version.
+The training is based on the corrupted inputs:</p>
+<p>$$L  _{DAE}(\theta) = \sum _t \mathbb{E}  _{q(\tilde{x}| x^{t})}\left[L(x^t,g  _\theta(f  _\theta(\tilde{x})))\right]$$</p>
+<p>where $q(\tilde{x}|x^t)$ is the corruption process.</p>
+<p>The process of denoising can be given an geometric interpretation under
+the manifold asumption that natural high dimensional data concentrates
+close to a non-linear low-dimensional manifold. The DAE can be seen as a
+way to learn low-dimensional structure of data.</p>
+<p>Same as deep autoencoders, by stacking a lot of DAEs, we can build deep
+networks, where each layer is pre-trained by DAEs. Such kind of
+architecture is called <strong>stacked denoising autoencoders (SDAEs)</strong>.</p>
+<p>Due to the denosing effect, the DAE/SDAE is suitable for noisy datasets.
+It is used in speech recognitions [Feng2014SFD; Feng2014SFD], and it
+is also used to denoise data: [Zhao2015MR] used DAEs to remove musics
+from speeches, [Gondara2016MID] used DAEs in medical image denoising
+and [Chaitanya2017IRM] used DAEs to achieve super-resolutions.</p>
+<p>The definition of robustness could vary. [Rifai2011CAE] achieved robust
+representations by minimizing the first order variation and proposed
+<strong>contractive autoencoders (CAEs)</strong>. The object function is defined as:</p>
+<p>$$L  _{CAE}(\theta) =  L  _{AE}(\theta) + \lambda\sum _t ||J(x^t)|| _F^2$$</p>
+<p>where $J(x^t) = \frac{\partial f _\theta}{\partial x}(x _t)$.</p>
+<p>The authors introduced the concept of contraction ratio, which is the
+ratio of the distances between two points in their original (input)
+space and their distance once mapped in the feature space. The panelty
+of the Jacobian tends to contract data, while the panelty of
+construction error makes sure that there are directions resisting the
+contraction effect. This can be seen that the model learns a
+low-dimensional structure of input data. The contraction ratios on the
+directions along the manifold will be near 1, and the contraction ratios
+on the directions othogonal to the manifold will be near 0.</p>
+<p>Their experiments showed that the learned representations performed as
+good as DAEs on classification problems and showed that their
+contraction properties are similar.</p>
+<p>Followed by this work, [Rifai2011HOC] proposed <strong>the higher-order CAE</strong>
+which adds an additional penalty on all higher derivatives:</p>
+<p>$$L(\theta) = \sum  _t L(x^t, g  _\theta(f  _\theta(x^t))) + \lambda||J(x^t)||  _F^2 + \gamma E  _\epsilon\left[||J(x) - J(x+\epsilon)||  _F^2\right]$$</p>
+<p>where $\epsilon \sim \mathcal{N}(0, \sigma^2I)$.</p>
+<h1 id="gnerative-model">Gnerative Model</h1>
+<h2 id="sampling-around-valid-latent-representations">Sampling around valid latent representations</h2>
+<p>From autoencoder, we can get a high-level representation of the original
+dataset. Given a valid latent representation (an encoding of an
+arbitrary real data point), we can sample around in the latent space and
+then decode these samples to get new data.</p>
+<p>[Vincent2010SDA] did some first atempts. They used Bernoulli sampling
+to AEs and DAEs to transfer them into generative models.</p>
+<p>However, the DAE has randomness as a part of itself - the corruption
+process. So we can sample based on this randomness. [Bengio2013GDA]
+used Gibbs sampling to alternatively sample between the input space and
+the latent space, and transfered DAEs into generative models.
+$$\begin{split}X _t \sim P  _\theta(X|\tilde{X}  _{t-1})\cr
+\tilde{X} _t \sim q(\tilde{X}|X _t)
+\end{split}$$ They also proved that the distribution of ${X _t}$ is
+consistent with the distribution of the dataset.</p>
+<p>[Rifai2012GPS] proposed a generative model by sampling from CADs. They
+used the information of the Jacobian to sample around the latent space.
+Given a valid latent representation $h$, the pertubation around $h$ is
+aquired by:
+$$\Delta h = J(x _t) \epsilon = \frac{\partial f}{\partial x}(x _t)\epsilon, \ \ \ \ \ \  \epsilon\sim \mathcal{N}(0,\sigma^2I)$$
+This can be interpreted as to move around on the manifold of dataset.</p>
+<h2 id="sampling-directly-in-the-latent-space">Sampling directly in the latent space</h2>
+<p>This direction is to decide the latent space first, and then make all
+latent points be able to decoded into meaningful new data.</p>
+<p>The <strong>Variational autoencoder (VAE)</strong> [Kingma2013AutoEncodingVB] use
+probability perspective to interprete autoencoders.</p>
+<p>Assumes the prior of the latent variable $z$ is from some parametric
+family of distributions $p  _\theta(z)$. The observed data is generated
+from the posterior distribution $p  _\theta(x|z)$. The true posterior of
+$z$ is $p  _\theta(z|x)$, but is intractable. To get $p  _\theta(z|x)$, we
+use another parametric family $q  _\phi(z|x)$, which is tractable, to
+approximate it.</p>
+<p>By variational inference, the following equality holds:
+$$\log p  _\theta(x) = D  _{KL}(q  _\phi(z|x)||p  _\theta(z|x)) + L(\theta, \phi; x)$$
+where
+$$L(\theta, \phi; x) = -D  _{KL}(q  _\phi(z|x)||p _\theta(z)) + \mathbb{E}  _{q  _\phi(z|x)}\left[\log p  _\theta(x|z)\right]$$</p>
+<p>So the approximation can be done by maximize $L(\theta, \phi; x)$.</p>
+<p>In the framework of autoencoder, given $x$, $\phi$ is generated by the
+encoder, and the decoder is defined by another network.</p>
+<p>In VAE, we assume $z\sim \mathcal{N}(0,1)$, and $q _\phi(z|x)$ is also a
+normal distribution. The encoder will generate the mean $\mu _x$ and the
+standard derivation $\sigma _x$ of this distribution. And we use
+Monte-Carlo sampling to approximate
+$\mathbb{E} _{q _\phi(z|x)}\left[\log p _\theta(x|z)\right]$. Under this
+modeling, $L(\theta, \phi; x)$ has explicit expression and can be
+maximized by gradient descent.</p>
+<p>After the training converge, $D _{KL}(q _\phi(z|x)||p _\theta(z))$ will be
+minimized, so we can expect that each latent vector corresponds to some
+meaningful data in the input space. We can sample directly in the latent
+space by $z\sim \mathcal{N}(0,1)$ and use the decoder to generate new
+data.</p>
+<p>Followed by the big success of GANs, [Goodfellow2016AAE] proposed
+<strong>adversarial autoencoders (AAEs)</strong>, which use GANs to minimize the
+discrepancy between an arbitrary porior $p _\theta(z)$ and
+$q _\phi(z) = \int _x q _\phi(z|x)p _d(x)dx$ where $p _d(x)$ is the
+distribution of dataset. The assumptions are similar with the VAE&rsquo;s, but
+the training procedures are different. There are two phases:
+reconstruction phase and regularization phase. In the reconstruction
+phase, the encoder is updated to minimize
+$\mathbb{E} _{q _\phi(z|x)}\left[\log p _\theta(x|z)\right]$. In the
+regularization phase, the discriminator is updated to discriminate
+$p _\theta(z)$ and $q _\phi(z)$.</p>
+<h1 id="reference">Reference</h1>
+<p>[Baldi1989NNP]:  P. Baldi and K. Hornik. Neural networks and principal component
+analysis: Learning from examples without local minima. , 2(1):53&ndash;58,
+January 1989.</p>
+<p>[Bengio2007SLA]:  Yoshua Bengio and Yann LeCun. Scaling learning algorithms towards AI. In
+Leon Bottou, Olivier Chapelle, D. DeCoste, and J. Weston, editors,
+<em>Large Scale Kernel Machines</em>. MIT Press, 2007.</p>
+<p>[Bengio2013GDA]:  Yoshua Bengio, Li Yao, Guillaume Alain, and Pascal Vincent. Generalized
+denoising auto-encoders as generative models. In <em>Proceedings of the
+26th International Conference on Neural Information Processing Systems -
+Volume 1</em>, NIPS'13, pages 899&ndash;907, USA, 2013. Curran Associates Inc.</p>
+<p>[Chaitanya2017IRM]:  Chakravarty R. Alla Chaitanya, Anton S. Kaplanyan, Christoph Schied,
+Marco Salvi, Aaron Lefohn, Derek Nowrouzezahrai, and Timo Aila.
+Interactive reconstruction of monte carlo image sequences using a
+recurrent denoising autoencoder. , 36(4):98:1&ndash;98:12, July 2017.</p>
+<p>[Deng2013SAE]:  J. Deng, Z. Zhang, E. Marchi, and B. Schuller. Sparse autoencoder-based
+feature transfer learning for speech emotion recognition. In <em>2013
+Humaine Association Conference on Affective Computing and Intelligent
+Interaction</em>, pages 511&ndash;516, Sept 2013.</p>
+<p>[Feng2014SFD]:  X. Feng, Y. Zhang, and J. Glass. Speech feature denoising and
+dereverberation via deep autoencoders for noisy reverberant speech
+recognition. In <em>2014 IEEE International Conference on Acoustics, Speech
+and Signal Processing (ICASSP)</em>, pages 1759&ndash;1763, May 2014.</p>
+<p>[Foldiak1998SCP]:  Peter Földiák and Malcolm P. Young. The handbook of brain theory and
+neural networks. chapter Sparse Coding in the Primate Cortex, pages
+895&ndash;898. MIT Press, Cambridge, MA, USA, 1998.</p>
+<p>[Gondara2016MID]:  L. Gondara. Medical image denoising using convolutional denoising
+autoencoders. In <em>2016 IEEE 16th International Conference on Data Mining
+Workshops (ICDMW)</em>, pages 241&ndash;246, Dec 2016.</p>
+<p>[HinSal2006DR]:  Geoffrey Hinton and Ruslan Salakhutdinov. Reducing the dimensionality of
+data with neural networks. , 313(5786):504 &ndash; 507, 2006.</p>
+<p>[Kingma2013AutoEncodingVB]:  Diederik P. Kingma and Max Welling. Auto-encoding variational bayes. ,
+abs/1312.6114, 2013.</p>
+<p>[Goodfellow2016AAE]:  Alireza Makhzani, Jonathon Shlens, Navdeep Jaitly, and Ian Goodfellow.
+Adversarial autoencoders. In <em>International Conference on Learning
+Representations</em>, 2016.</p>
+<p>[Ng2011SAE]:  Andrew Ng. Sparse autoencoder. , December 2011.</p>
+<p>[OLSHAUSEN19973311]:  Bruno A. Olshausen and David J. Field. Sparse coding with an
+overcomplete basis set: A strategy employed by v1? , 37(23):3311 &ndash;
+3325, 1997.</p>
+<p>[Ranzato2007SFL]:  Marc' Aurelio Ranzato, Y-Lan Boureau, and Yann LeCun. Sparse feature
+learning for deep belief networks. In <em>Proceedings of the 20th
+International Conference on Neural Information Processing Systems</em>,
+NIPS'07, pages 1185&ndash;1192, USA, 2007. Curran Associates Inc.</p>
+<p>[Ranzato2006ELS]:  Marc&rsquo;Aurelio Ranzato, Christopher Poultney, Sumit Chopra, and Yann
+LeCun. Efficient learning of sparse representations with an energy-based
+model. In <em>Proceedings of the 19th International Conference on Neural
+Information Processing Systems</em>, NIPS'06, pages 1137&ndash;1144, Cambridge,
+MA, USA, 2006. MIT Press.</p>
+<p>[Rifai2012GPS]:  Salah Rifai, Yoshua Bengio, Yann N. Dauphin, and Pascal Vincent. A
+generative process for sampling contractive auto-encoders. In
+<em>Proceedings of the 29th International Coference on International
+Conference on Machine Learning</em>, ICML'12, pages 1811&ndash;1818, USA, 2012.
+Omnipress.</p>
+<p>[Rifai2011HOC]:  Salah Rifai, Grégoire Mesnil, Pascal Vincent, Xavier Muller, Yoshua
+Bengio, Yann Dauphin, and Xavier Glorot. Higher order contractive
+auto-encoder. In <em>Proceedings of the 2011 European Conference on Machine
+Learning and Knowledge Discovery in Databases - Volume Part II</em>, ECML
+PKDD'11, pages 645&ndash;660, Berlin, Heidelberg, 2011. Springer-Verlag.</p>
+<p>[Rifai2011CAE]:  Salah Rifai, Pascal Vincent, Xavier Muller, Xavier Glorot, and Yoshua
+Bengio. Contractive auto-encoders: Explicit invariance during feature
+extraction. In <em>Proceedings of the 28th International Conference on
+International Conference on Machine Learning</em>, ICML'11, pages 833&ndash;840,
+USA, 2011. Omnipress.</p>
+<p>[Tao2015SSAE]:  C. Tao, H. Pan, Y. Li, and Z. Zou. Unsupervised spectral spatial feature
+learning with stacked sparse autoencoder for hyperspectral imagery
+classification. , 12(12):2438&ndash;2442, Dec 2015.</p>
+<p>[Vincent2008ECR]:  Pascal Vincent, Hugo Larochelle, Yoshua Bengio, and Pierre-Antoine
+Manzagol. Extracting and composing robust features with denoising
+autoencoders. In <em>Proceedings of the 25th International Conference on
+Machine Learning</em>, ICML &lsquo;08, pages 1096&ndash;1103, New York, NY, USA, 2008.
+ACM.</p>
+<p>[Vincent2010SDA]:  Pascal Vincent, Hugo Larochelle, Isabelle Lajoie, Yoshua Bengio, and
+Pierre-Antoine Manzagol. Stacked denoising autoencoders: Learning useful
+representations in a deep network with a local denoising criterion. ,
+11:3371&ndash;3408, December 2010.</p>
+<p>[Xu2016SSAE]:  Jun Xu, Lei Xiang, Qingshan Liu, Hannah Gilmore, Jianzhong Wu, Jinghai
+Tang, and Anant Madabhushi. Stacked sparse autoencoder (ssae) for nuclei
+detection on breast cancer histopathology images. , 35(1):119&ndash;130, 1
+2016.</p>
+<p>[Zhao2015MR]:  M. Zhao, D. Wang, Z. Zhang, and X. Zhang. Music removal by convolutional
+denoising autoencoder in speech recognition. In <em>2015 Asia-Pacific
+Signal and Information Processing Association Annual Summit and
+Conference (APSIPA)</em>, pages 338&ndash;341, Dec 2015.</p>
+
+    
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

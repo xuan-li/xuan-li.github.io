@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Properties of Manifolds |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Dec 19, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h3 id="topological-manifolds">Topological Manifolds</h3>
+<p><strong>Definition 1.</strong>
+A topological manifold $M$ of dimension $n$ is a <a href="https://en.wikipedia.org/wiki/Second-countable_space">second-countable</a> <a href="https://en.wikipedia.org/wiki/Hausdorff_space">Hausdorff space</a> which is <a href="https://topospaces.subwiki.org/wiki/Locally_Euclidean_space">locally Euclidean</a> of dimension $n$.</p>
+<p>&ldquo;Locally Euclidean&rdquo; means that for each $p\in M$, we can find an open subset $U$ such that $p\in U\subset M$ and a homeomorphism $\phi$ from $U$ to $\tilde{U} \subset \mathbb{R}^n$ (or $\mathbb{H}^n$, which means there is a boundary). Such $(\phi, U)$ is called a coordinate chart for $M$ at $p$. If $\tilde{U}$  is a ball, $U$ is called a coordinate ball. If in addition $\bar{U} \subset U'$ and $\phi$ can be extended to $U'$ such that $\phi(\bar{U})$ and $\phi(U')$ are also  balls, then $U$ is called a regular coordinate ball. A union of charts which is also a open cover of $M$ is called an atlas.</p>
+<p><strong>Proposition 1.</strong> Every topological manifold has a basis of regular coordinate balls.</p>
+<p><strong>Lemma 1 (<a href="https://math.stackexchange.com/questions/143988/how-to-prove-the-closed-map-lemma">Closed Map Lemma</a>).</strong> If $X,Y$ are two topological space, $X$ is compact, $Y$ is Hausdorff. Then if $f: X\rightarrow Y$ is continuous, $f$ is a closed map.</p>
+<p><strong>Lemma 2.</strong>
+Let $M$ be a $n$-manifold. If $B'$ is a coordinate ball and $\phi: B' \rightarrow B _{r'}$ is its coordinate map, then $\forall r&lt; r'$, $\phi^{-1}(B _{r})$ is a regular coordinate ball.</p>
+<p><em>Proof.</em>
+Let $B = \phi^{-1}(B_r)$. We only need to prove that $\phi(\overline{B}) = \overline{B_r}$, or $\phi^{-1}(\overline{B_r}) = \overline{B}$. According to the closed map lemma, $\phi^{-1}$ is a closed map. So $\phi^{-1}(\overline{B_r})$ is a closed set. Since for any continuous map $f$, $f(\overline{A})\subset \overline{f(A)}$, so $B \subset \phi^{-1}(\overline{B_r}) \subset \overline{B}$. This means $\phi^{-1}(\overline{B_r}) = \overline{B}$.</p>
+<p><em>Proof of Proposition 1.</em>
+Take a countable basis $\mathcal{B'}$ of $M$. Define $\mathcal{\tilde{B}} = \cup_x B _{x, r(x)}$, where $x$ ranges over all points of $M$, $B _{x, r(x)}$ is a coordinate ball center at $x$ with radius $r(x)$ and is contained in some $B'\in \mathcal{B'}$. Let $\mathcal{B}=\cup _{x, r&lt;r(x)}B _{x, r}$ where $x$ has rational coordinate, and $r$ is a rational. According to lemma 2, $\mathcal{B}$ is a basis of countable regular balls.</p>
+<p><strong>Corollary 1.</strong>
+Every topological manifold has a countable basis of <a href="https://en.wikipedia.org/wiki/Relatively_compact_subspace">precompact</a> coordinate balls.</p>
+<p><strong>Corollary 2.</strong>
+Every topological manifold is locally compact, i.e. every point has a neighborhood contained in a compact subset.</p>
+<p><strong>Definition 2.</strong>
+$M$ is <a href="https://en.wikipedia.org/wiki/Paracompact_space">paracompact</a> if every open cover admits an open, locally finite refinement.</p>
+<p><strong>Theorem 1.</strong>
+Given a topological manifold $M$, any open covers $\mathcal{X}$, and any basis $\mathcal{B}$, there exists a locally finite open refinement of $\mathcal{X}$ consisting of elements of $\mathcal{B}$. This means every topological manifold is paracompact.</p>
+<p><strong>Lemma 2.</strong>
+Every manifold $M$ admits an exhaustion of compact sets: $M = \cup_i K_i$, where all $K_i$ are compact and $K_i \subset K _{i+1}$.</p>
+<p><em>Proof of theorem 1.</em>
+<img src="/img/posts/paracompact.png" alt="paracompact">
+Take a compect exhaustion $M = \cup_i K_i$, define $V_j = K _{j+1} \setminus \text{Int}K _{j}$ and $W_j = \text{Int}K _{j+2} \setminus K _{j-1}$. So $V_j$ is compact, $W_j$ is open and $V_j \subset W_j$. For each $x\in V_j$, there is some $X_x \in \mathcal{X}$ such that $x\in X_x$, and there exists some $B_x \in \mathcal{B}$ such that $x\in B_x \subset X_x \cap W_j$. $O_j = \cup _{x\in V_j} B_x$ is an open cover of $V_j$, so has a finite subcover. $\mathcal{O} = \cup_j O_j$ is then a open refinement of $\mathcal{X}$. Since each $x\in M$ is contained in at most two $V_j$s, so $\mathcal{O}$ is locally finite.</p>
+<p>This theorem means that we can use any basis to refine any open cover to get a locally finite open cover.</p>
+<h3 id="smooth-manifolds">Smooth Manifolds</h3>
+<p><img src="/img/posts/smooth_manifold.png" alt="smooth transition map">
+<strong>Definition 3.</strong> A manifold is smooth if it admits a smooth atlas.
+Smooth altas means the transition map between any pair of charts $(U, \phi)$ and $(V, \psi)$: $\psi\circ\phi^{-1}$ is smooth from $\phi(U\cap V)$ to $\psi(U\cap V)$.</p>
+<p>Given a smooth atlas $(U, \phi)$, we can continue to add charts such that the result is still smooth atlas (we just need to make sure that added chart is smooth compatiable with every charts which are in the atlas already) until we cannot find any such chart anymore. This altas is called a maximal smooth atlas or smooth structure.</p>
+<p><strong>Proposition 2.</strong> Every smooth chart $\mathcal{A}$ is contained in a unique smooth structure. Two smooth atlas determines the same smooth structure if and only if their union is still a smooth atlas.</p>
+<p><strong>Definition 4.</strong> Smoothness for boundary chart is defined as follows: For any pair of charts $(U, \phi)$ and $(V, \psi)$, where $U$ is a boundary chart (homeomorphic to $\mathbb{H}^n$), $\psi \circ \phi^{-1}$ can be extended to a smooth map on $\mathbb{R}^n$.</p>
+<hr>
+<h3 id="reference">Reference</h3>
+<p><a href="http://www.springer.com/us/book/9781441999818">Introduction to Smooth Manifolds</a></p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/chinese-remainder/">Chinese Remainder Theorem and Square Roots Under Modulo</a></li>
+        
+            <li><a href="/post/convergence-of-series/">Convergence of Series</a></li>
+        
+            <li><a href="/post/sums/">Sums</a></li>
+        
+            <li><a href="/post/repertoire-method/">Repertoire Method</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/project/</link>
+    <description>Recent content in Projects on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate><atom:link href="http://xuan-li.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surface Parameterization</title>
+      <link>http://xuan-li.github.io/project/parameterization/</link>
+      <pubDate>Mon, 10 Jun 2019 22:38:46 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/project/parameterization/</guid>
+      <description>It is a Computer Graphics course project. I implemented three kinds of parameterization algorithms: orbifold tutte embeddings, hyperbolic orbifold tutte embeddings, boundary first flattening. The first two solve a parameterization that can tessellate the whole Euclidean space or Hyperbolic space to form an orbifold structure. The third one embeds the boundary isometrically with given cone angles first and then extend to inner conformally.</description>
+    </item>
+    
+    <item>
+      <title>Simple Ray Tracer</title>
+      <link>http://xuan-li.github.io/project/ray_tracer/</link>
+      <pubDate>Tue, 26 Mar 2019 15:19:09 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/project/ray_tracer/</guid>
+      <description>It is a simple CPU ray tracer. I followed the instructions in Ray Tracing in One Weekend to learn rendering. I did implement it in a weekend.</description>
+    </item>
+    
+    <item>
+      <title>Infinitesimal Rigidity Checker</title>
+      <link>http://xuan-li.github.io/project/infinitesimal_rigidity/</link>
+      <pubDate>Sun, 16 Jul 2017 00:54:15 -0500</pubDate>
+      
+      <guid>http://xuan-li.github.io/project/infinitesimal_rigidity/</guid>
+      <description>It is my undergraduate thesis. I turned the theory of infinitesimal rigidity into a program, which uses Hilbert-Einstein functional to decide whether a polyhedron is infinitesimally rigid and can visualize the basis of non-trivial infinitesimal motions of a polyhedron.</description>
+    </item>
+    
+  </channel>
+</rss>

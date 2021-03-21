@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Sums |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/sums/">Sums</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Oct 6, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h2 id="1-from-sums-to-recurences">1. From Sums to Recurences.</h2>
+<p>The general idea is that
+$$
+S_n = \sum _{i = i} ^n a_i
+$$</p>
+<p>can be writen as:</p>
+<p>$$
+\begin{cases}
+S_0 &amp;=&amp; 0\cr
+S_n &amp;=&amp; S _{n-1} + a_n
+\end{cases}
+$$</p>
+<p>In the last post of <!-- raw HTML omitted -->Rpertoire Method<!-- raw HTML omitted -->, we have seen how to compute the sum of constant-efficient polynomials.</p>
+<h2 id="2-from-recurences-to-sums">2. From Recurences to Sums</h2>
+<p>We will talk about the following recurence:
+$$
+a_nT_n = b_nT _{n-1} + c_n
+$$
+We want to find a summation factor to change the recurence to a sum.</p>
+<p>Assume $s_n$ is a factor to be determined. We multiply both side of the recurence by $s_n$:
+$$s_na_nT_n = s_nb_nT _{n-1} + s_nc_n,$$ where $n\ge 1$.</p>
+<p>We want this recurence to be a recurence induced by a sum. So we assume
+$$ s_n b_n = s _{n-1} a _{n-1}.$$</p>
+<p>We write $S_n = s_n a_n T_n$, then we get $S_n = S _{n-1} + s_nc_n$.</p>
+<p>That is,
+$$S_n = S_0 + \sum _{i = 1} ^n s_ic_i$$ (Since $n\ge 1$)</p>
+<p>Now let&rsquo;s find a factor $s_n$.
+The only condition is $$ \frac{s_n}{s _{n-1}} = \frac{a _{n-1}}{b_n}$$ and we only need to find only one such kind of factor, so it is safe to assume $s_1 = 1$.
+Usually we choose
+$$
+s_n = \frac{s_n}{s _{n-1}} \frac{s _{n-1}}{s _{n-2}}&hellip; \frac{s_2}{s_1} s_1 = \frac{a _{n-1}a _{n-2}&hellip;a_1}{b _{n}b _{n-1} &hellip; b_2}
+$$</p>
+<p>This will lead to
+$$
+T_n = \frac{1}{s_na_n}(\sum _{i = 1}^n s_i c_i + s_1b_1T_0)
+$$</p>
+<h3 id="example-21">Example 2.1</h3>
+<p>$$
+\begin{cases}
+C_0 &amp;=&amp; 0, \cr
+C_n &amp;=&amp; n+1 + \frac{2}{n}\sum _{k = 0}^{n-1}C_k.
+\end{cases}
+$$</p>
+<p>First we eliminate the sum in the recurence by replacement of index and subtraction:
+$$nC_n - (n-1)C _{n-1} = 2n + 2C _{n-1}, \ \ n&gt;1$$
+We can check that this also holds when $n=1$
+So the original recurence can be reduced to :
+$$
+\begin{cases}
+C_0 &amp;= 0 \cr
+nC_n &amp;= (n+1)C _{n-1} + 2n
+\end{cases}
+$$</p>
+<p>In this case, $$\begin{cases}
+a_n &amp;= n\cr
+b_n &amp;= n + 1\cr
+c_n &amp;= 2n
+\end{cases}
+$$</p>
+<p>We set $$s_n = \frac{a _{n-1}&hellip;a_1}{b_n&hellip;b_2} = \frac{2}{n(n+1)}.$$
+Then we have $\sum _{i=1}^n s_ic_i= \sum _{i=1}^n \frac{4}{i+1}$.</p>
+<p>Finally, we get
+$$
+C_n = 2(n+1)\sum _{k=1}^n \frac{1}{k+1}
+$$</p>
+<p>With $H_n = \sum _{k = 1}^n \frac{1}{k}$, we can rewrite $C_n$ as
+$$C_n = 2(n+1)H_n - 2n$$</p>
+<h2 id="3-manipulation-of-sums">3. Manipulation of Sums</h2>
+<h3 id="31-rearrangement">3.1 Rearrangement</h3>
+<p>We treat the indices in a sum as a set, then we can manipulate it using set operation.</p>
+<h4 id="example-311">Example 3.1.1</h4>
+<p>Prove: $$(\sum _{k=1}^n a_k)(\sum _{k=1}^n b_k) = n\sum _{k = 1}^n a_k b_k - \sum _{1\le j&lt;k\le n}(a_k - a_j)(b_k - b_j)$$</p>
+<p>Proof.
+$$
+\begin{split}
+S = \sum _{1\le j&lt;k\le n}(a_k - a_j)(b_k - b_j) =  \sum _{1 \le k &lt; j \le n} (a_k - a_j)(b_k - b_j)
+\end{split}
+$$
+$$
+\begin{split}
+2S &amp;= \sum _{1 \le j, k \le n}(a_j - a_k)(b_j - b_k) - \sum _{1 \le j=k \le n} (a_j - a_k) (b_j - b_k)\cr
+&amp;=\sum _{1 \le j, k \le n}(a_j - a_k)(b_j - b_k)\cr
+&amp;=\sum _{1 \le j, k \le n} (a_j b_j - a_j b _k - a_k b_j + a_k b_k) \cr
+&amp; =2n \sum _{k = 1} ^ n a_kb_k - 2(\sum _{k = 1}^n a_k) (\sum _{k = 1} ^ n b_k)
+\end{split}
+$$</p>
+<h4 id="example-312">Example 3.1.2</h4>
+<p>Prove Lagrange&rsquo;s Identity:
+$$
+(\sum _{k = 1} ^n a_k^2)(\sum _{k = 1} ^n b_k^2) = (\sum _{k=1}^n a_k b_k)^2 + \sum _{1 \le j &lt; k \le n} (a_kb_j - a_jb_k)^2
+$$</p>
+<p>Proof.
+$$
+S = \sum _{1 \le j &lt; k \le n} (a_kb_j - a_jb_k)^2 = \sum _{1 \le k &lt; j \le n} (a_kb_j - a_jb_k)^2
+$$
+$$
+\begin{split}
+2S = &amp; \sum _{1 \le j, k \le n} (a_kb_j - a_jb_k)^2\cr
+=&amp; \sum _{1 \le j, k \le n} (a_k^2 b_j^2 - 2a_jb_ja_kb_k + a_j^2 b_k^2)\cr
+=&amp; 2(\sum _{k = 1} ^n a_k^2)(\sum _{k = 1}^n b_k^2) - 2(\sum _{k =1} ^n a_kb_k)(\sum _{k = 1}^n a_kb_k)
+\end{split}
+$$</p>
+<h3 id="32-perturbation-method">3.2 Perturbation Method</h3>
+<p>$$S_n + a _{n+1} = a_0 + \sum _{k=1} ^{n+1} a_k = a_0 + \sum _{k=0}^n a _{k+1}$$</p>
+<h4 id="example-321">Example 3.2.1</h4>
+<p>$$
+S_n = \sum _{0 \le k \le n} k 2^k
+$$</p>
+<p>$$
+\begin{split}
+S_n + (n +1)2^ {n+1} &amp;= \sum _{k = 0}^n (k+1)2 ^{k+1}\cr
+&amp;= 2S_n + 2\sum _{k = 0}^n 2 ^{k}
+\end{split}
+$$</p>
+<h2 id="4-finite-calculus">4. Finite Calculus</h2>
+<h3 id="41-definitions">4.1 Definitions</h3>
+<p>Difference operator:
+$$\Delta f(x) = f(x+1) - f(x)$$</p>
+<p>Discrete Integral:
+$$\Sigma_a^b = \sum _{[a,b)}$$</p>
+<p>Note that we cannot include the right end of $[a, b)$, since we the integral should be transitive, that is,
+$$ \Sigma_a^b + \Sigma_b^c = \Sigma_a^c $$</p>
+<p>Shift operator:
+$$Ef(x) = f(x+1)$$</p>
+<p>Discrete power:
+$$
+x ^{ \underline{m}} =
+\begin{cases}
+x(x-1)&hellip;(x-m+1), &amp;m\ge 0\cr
+\frac{1}{(x+1)&hellip;(x+m)}, &amp;m&lt;0
+\end{cases}
+$$</p>
+<h3 id="42-properties">4.2 Properties</h3>
+<p>$$x ^{\underline{m} + \underline{n}} = x ^{\underline{m}} (x-m) ^{\underline{n}}$$
+$$\Delta x ^{\underline{m}} = m x ^{\underline{m-1}}$$
+$$\Sigma x ^{\underline{m}} =
+\begin{cases}
+\frac{x^{\underline{m+1}}}{m+1} +C,&amp;m \not =-1\cr
+H_x + C, &amp;m = -1
+\end{cases}
+$$
+$$ \Delta c^x = (c-1)c^x$$
+$$\Delta (uv) = u\Delta v + Ev \Delta u$$
+$$\Sigma u \Delta v = uv - \Sigma Ev\Delta u$$</p>
+<h4 id="example-421">Example 4.2.1</h4>
+<p>$$\Sigma x 2^x = \Sigma x \Delta 2^x = x 2^x - \Sigma 2 ^{x+1} \Delta x = x 2^x - 2^{x+1} + C$$</p>
+<p>$$
+\begin{split}
+\Sigma x H_x &amp;= \Sigma x ^{\underline{1}}H_x =  \frac{1}{2}\Sigma H_x \Delta x ^{\underline{2}} \cr
+&amp;=\frac{1}{2}H_x x^{\underline{2}} - \frac{1}{2}\Sigma x^{\underline{-1}}(x - (-1))^{\underline{2}}\cr
+&amp;=\frac{1}{2}H_x x^{\underline{2}} - \frac{1}{2}\Sigma x^{\underline{1}} = \frac{1}{2}x^{\underline{2}}H_x  - \frac{1}{4}x^{\underline{2}} + C
+\end{split}
+$$</p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/repertoire-method/">Repertoire Method</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

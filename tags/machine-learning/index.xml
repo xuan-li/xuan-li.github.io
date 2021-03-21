@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 11 May 2018 23:46:27 -0400</lastBuildDate><atom:link href="http://xuan-li.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Literature Review on Autoencoders</title>
+      <link>http://xuan-li.github.io/post/autoencoder_review/</link>
+      <pubDate>Fri, 11 May 2018 23:46:27 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/post/autoencoder_review/</guid>
+      <description>An overview on autoencoders</description>
+    </item>
+    
+  </channel>
+</rss>

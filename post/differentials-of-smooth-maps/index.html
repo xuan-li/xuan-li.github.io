@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Differentials of Smooth Maps |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Dec 20, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h3 id="tangent-vectors-and-differentials">Tangent Vectors and Differentials</h3>
+<p><strong>Definition 1.</strong> A tangent vector at $p\in M$ is defined as a linear functional $v: C ^{\infty}(M) \rightarrow \mathbb{R}$, which satisfies: $$ v(fg) = f(p)vg+g(p)vf, \forall f, g\in C ^{\infty}(M)$$
+The linear space $T_p M$ of all tangent vectors at $p$ is defined as the tangent space at $p$.</p>
+<p>When $M = \mathbb{R}^n$, we can see that tangent vectors are just derivative operators along some directions:
+$$\frac{\partial}{\partial e}\bigg{|}_p fg = f(p) \frac{\partial}{\partial e}g(p)  + g(p)\frac{\partial}{\partial e} f(p)$$
+where $$ \frac{\partial}{\partial e}\bigg{|}_p f :=  \frac{d}{d t}\bigg{|} _{t=0}f(p+te) = e^i \frac{\partial }{\partial x^i} f(p)$$
+And $\{\frac{\partial }{\partial x^i}\big{|}_p\}$ is the basis of $T_p \mathbb{R}^n$.</p>
+<p><strong>Definition 2.</strong>
+The differential of $F: M\rightarrow N$ at $p\in M$ is a linear map:
+$dF_p: T_p M \rightarrow T _{F(p)}N$ defined as:
+$$dF_p(v)(f) = v(f\circ F), \forall v\in T_p M, \forall f\in C^{\infty}(N)$$</p>
+<p>The definitions above tell us that we need to use smooth functions to &ldquo;feel&rdquo; the tangent spaces and differentials.</p>
+<p>Same as smoothness, tangent vectors are local.</p>
+<p><strong>Proposition 1.</strong> Let $v\in T_p M$. If $f, g\in C^{\infty}(M)$ agree on some neiborhood $U$ of $p$, then $vf = vg$</p>
+<p><em>Proof.</em> $h = f-g$ is zero at $p$. Find a bump function $\psi$ for $\text{supp }h$ suppported in $M\setminus\{p\}$, so $\psi h \equiv h$. Then $v(h) = v(\psi h) = 0$</p>
+<p><strong>Proposition 2.</strong> Let $U\subset M$ be open and $\imath: U \hookrightarrow M$ is the inclusion map. Then for each $p \in M$, $d\imath_p :T_p U \rightarrow T_p M$ is an isomorphism.</p>
+<p><em>Proof.</em> $d\imath_p$ is a linear map, so we only need to prove that it is bijective. For injectivity, we choose a neighborhood $B$ of $p$ such that $\overline{B}\subset U$. Assume $d \imath_p(v) = 0$. Then for any $f\in C^{\infty}(U)$, we can find $\tilde{f}\in C^{\infty}(M) $ that agrees with $f$ on $\overline{B}$. So $v(f) = v(\tilde{f}\circ \imath) = d \imath_p(v) (\tilde{f}) = 0$. For surjectivity, for any $w\in C^{\infty}(M)$, we define $v\in C^{\infty}(U)$ by $vf = w\tilde{f}$. Then we need to check $d\imath_p(v) = w$: $d\imath_p(v)f = v(f\circ i) = w(\widetilde{f\circ i}) = wf$ (because $\widetilde{f\circ i}$ and $f$ agree on $B$).</p>
+<p>For boundary points, we define tangent space by the following lemma:</p>
+<p><strong>Lemma 1.</strong> Let $\imath: \mathbb{H}^n\hookrightarrow \mathbb{R}^n$, for each $a\in \partial \mathbb{H}^n$, $d\imath_a: T _a \mathbb{H}^n\rightarrow T_a\mathbb{R}^n$ is an isomorphism.</p>
+<p>The scheme of proof is as the same as  proposition 2: $f\in C^{\infty}(\mathbb{H}^n)$ can be extended to defined on all $\mathbb{R}^n$.</p>
+<p><strong>Proposition 3.</strong> The dimension of $T_p M$ at any $p$ is $n$.</p>
+<p><em>Proof.</em> Let $(U, \phi)$ be a chart containing $p$, then $d\phi_p$ is an isomorphism between $T_p U$ and $T _{ \hat{p} } \hat{U}$. $dim(T _{ \hat{p} } \hat{U}) = n$.</p>
+<hr>
+<h3 id="coordinate-representation">Coordinate Representation</h3>
+<p>To compute with tangent vectors or differentials, we need to use coordinates.</p>
+<p><strong>Definition 3.</strong>
+Le $(U, \phi)$ be a local chart containing $p$, we define
+$$ \frac{\partial}{\partial x^i}\bigg{|}_p f = \frac{\partial}{\partial x^i}\bigg{|} _{\phi(p)} \hat{f} = \frac{\partial\hat{f}}{\partial x^i}(\hat{p}).$$ It can be checked that $\frac{\partial}{\partial x^i}\big{|}_p$ is a tangent vector at $p$.</p>
+<p>In the representation of coordinates, we can represent the basis of $T_p M$.</p>
+<p><strong>Proposition 4.</strong> $\{ \frac{\partial} {\partial x^i} \big{|}_p\} _{i=1}^n$ is a basis of $T_pM$.</p>
+<p>Every element of $T_p M$ has an representation of the form $$v = v^i \frac{\partial }{\partial x^i}$$</p>
+<p>For a differential of a smooth map:</p>
+<p>$$
+\begin{split}&amp;dF_p(\frac{\partial}{\partial x^i}\bigg{|}_p)(f) = \frac{\partial}{\partial x^i}\bigg{|}_p(f\circ F) \cr
+= &amp;\frac{\partial f}{\partial y^j}(F(p))\frac{\partial F^j}{\partial x^i}(p) = \left(\frac{\partial F^j}{\partial x^i}(p) \frac{\partial}{\partial y^j}\bigg{|} _{F(p)}\right)f\end{split}$$</p>
+<p>So the matrix representation of $dF_p$ is $\left(\frac{\partial F^i}{\partial x^j}(p)\right) _{n\times m}$, which is called the Jacobian matrix of $F$. The rank of this matrix is defined as the <strong>rank of $F$</strong>.</p>
+<hr>
+<h3 id="maps-of-constant-rank">Maps of Constant Rank</h3>
+<p><strong>Defintion 4.</strong> If the rank of $F: M \rightarrow N$ is a constant $r$ on all points of $U$, we say $F$ has constant rank on $U$. If $r = dim(N)$, we call $F$ a smooth <strong>submersion</strong>. If $r = dim(M)$, we call $F$ a smooth <strong>immersion</strong>, and if $F$ is a topological embedding, we call it a smooth <strong>embedding</strong>.</p>
+<p>Since the determinant function is continuous, if at some $p\in M$, $rank(F) \not = 0$, then we can find a neighborhood $U$ of $p$, such that $F$ has a constant rank on $U$.</p>
+<p>By the inverse function theorem on $\mathbb{R}^n$ and coordinate representation of smooth maps, we can prove similar theorem for manifolds:</p>
+<p><strong>Theorem 1 (Inverse Function Theorem for Manifolds).</strong> Suppose $M$ and $N$ are smooth manifolds <strong>without boundary</strong>, $F:M\rightarrow N$ is a smooth map. If $dF_p$ is invertable at $p$ , then there exist connected neighborhoods $U_0$ centered at $p$ and $V_0$ of $F(p)$ such that $F\big{|} _{U_0}$ is a diffeomorphism from $U_0$ to $V_0$.</p>
+<p>This theorem may fails for manifolds with boundaries. Consider $\imath: \mathbb{H}^n \hookrightarrow \mathbb{R}^n$, $d\imath_p$ is isomorphism on $\partial \mathbb{H}^n$. But $\mathbb{H}^n$ is not diffeomorphic to $\mathbb{R}^n$ locally on the boundary.</p>
+<p><strong>Defintion 5 (Local Diffeomorphism).</strong> Let $F: M\rightarrow N$ be a smooth map. If $\forall p \in M$, there exists a neighborhood $U$ such that $F\big{|}_U$ is a diffeomorphism.</p>
+<p>According to inverse function theorem, if $M, N$ are manifolds without boundary, $F: M\rightarrow N$ is a local diffeomorphism if and only if $dF_p$ is invertable at every $p\in M$.</p>
+<hr>
+<h3 id="rank-theorem">Rank Theorem</h3>
+<p><strong>Theorem 2 (Rank Theorem).</strong> Suppose $M$ is a $m$-manifold and $N$ is a $n$-manifold, without bounary, $F:M\rightarrow N$ is a smooth map with constant rank $r$, then $\forall p\in M$, there exist smooth chart $(U, \phi)$ centered at $p$ and $(V, \psi)$ centered at $F(p)$, such that $F(U) \subset V$ and in which $F$ has a coordinate representation as follows:
+$$\hat{F}(x^1, &hellip;, x^m) = (x^1, &hellip;, x^r, 0, &hellip;, 0)$$</p>
+<p><em>Proof.</em> This theorem is local, so we can use smooth charts to replace $M, N$ by $U\in \mathbb{R}^m, V \in \mathbb{R}^n$. Now we permutate the order of components of $\mathbb{R}^m$ such that $DF_p$ has a non-singular $r \times r$ upper left submatrix. We write coordinates in $\mathbb{R}^n$ as $(x, y) = (x^1, &hellip;, x^r, y^{1}, &hellip;, y^{m-r})$ and  coordinates in $\mathbb{R}^n$ as $(v, w) = (v^1, &hellip;, v^r, v^{1}, &hellip;, v^{n-r})$. We assume $p = (0,0)$ and $F(p) = (0,0)$. We write $$F(x, y) = (v, w) = (Q(x,y), R(x, y)),$$ then $(\frac{\partial Q^i}{\partial x^j})$ is non-singular at $(0,0)$. We define $$\phi(x, y) = (Q(x, y), y) \in \mathbb{R}^m.$$ We can check that $D\phi(0,0)$ is invertable. So by the inverse function theorem, there exist connected neighborhoods $U_0, \tilde{U_0}$ of $(0,0)$ such that $\phi \big{|} _{U_0}$ is a diffeomorphism from $U_0$ to $\tilde{U_0}$. We assume $$\phi^{-1}(x, y) = (A(x,y), B(x, y)),$$ then $$(x, y) = \phi \circ \phi^{-1}(x, y) = \phi(A(x,y), B(x, y)).$$ We get $B(x,y) = y$ and $Q(A(x, y), y) = x$.
+So $$\begin{split}F\circ \phi ^{-1}(x, y) = &amp;F(A(x, y), y) = (Q(A(x, y),y), R(A(x, y), y))\cr
+= &amp; (x, \tilde{R}(x,y))&amp;\end{split}.$$
+We shrink $U_0$ such that $F$ has aconstant rank $r$, so $\frac{\partial \tilde{R}^i}{\partial y^j} = 0$, that is, $\tilde{R}(x, y) = S(x)$
+Now we only need to find a coordinate transformation $\psi$ of $\mathbb{R}^n$ to eliminate $S(x)$. To do this, we define $\psi(v, w) = (v, w-S(v))$. We can check that $D\psi(0,0)$ is non-singular.  And we have $$\psi \circ F \circ \phi^{-1}(x, y) = (x, 0)\ \ on\ U_0.$$</p>
+<p>If $M$ has a boundary and $N$ does not has, we have the following rank theorem:</p>
+<p><strong>Theorem 3 (Local Immersion Thoerem for Boundaries).</strong> Suppose in addition $M$ has a boundary and $p\in \partial M$, then there exist a boundray chart $(U, \phi)$ centered at $p$ and a interior chart $(V, \psi)$ centered at $F(p)$ such that $F(U) \subset  V$ and $\hat{F}(x) = (x, 0)$.</p>
+<p><em>Proof.</em> We extend $F$ near $p$ as before. By rank theorem, we can find $(U_0, \phi_0)$ and $(V_0, \psi_0)$ such that $\psi_0 \circ F \circ \phi_0 ^{-1}(x) = (x, 0)$. But $(U_0, \phi_0)$ may not restricted to be a boundary chart. Now we define $\psi = (\phi_0^{-1}, Id _{\mathbb{R}^{n-m}})\circ \psi_0$. Then $$\psi\circ F (x)= \psi\circ F \circ \phi^{-1} \circ \phi(x) = (x, 0).$$</p>
+<h3 id="reference">Reference</h3>
+<p><a href="http://www.springer.com/us/book/9781441999818">Introduction to Smooth Manifolds</a></p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/smooth-maps/">Smooth Maps</a></li>
+        
+            <li><a href="/post/properties-of-manifolds/">Properties of Manifolds</a></li>
+        
+            <li><a href="/post/chinese-remainder/">Chinese Remainder Theorem and Square Roots Under Modulo</a></li>
+        
+            <li><a href="/post/convergence-of-series/">Convergence of Series</a></li>
+        
+            <li><a href="/post/sums/">Sums</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

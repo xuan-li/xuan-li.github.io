@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/tags/</link>
+    <description>Recent content in Tags on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 11 May 2018 23:46:27 -0400</lastBuildDate><atom:link href="http://xuan-li.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning</title>
+      <link>http://xuan-li.github.io/tags/machine-learning/</link>
+      <pubDate>Fri, 11 May 2018 23:46:27 -0400</pubDate>
+      
+      <guid>http://xuan-li.github.io/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content tagged as &#39;math&#39;</title>
+      <link>http://xuan-li.github.io/tags/math/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/tags/math/</guid>
+      <description>Here is a list of all the content that has been tagged as math.</description>
+    </item>
+    
+    <item>
+      <title>Content tagged as &#39;tutorial&#39;</title>
+      <link>http://xuan-li.github.io/tags/tutorial/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/tags/tutorial/</guid>
+      <description>Here is a list of all the content that has been tagged as tutorial.</description>
+    </item>
+    
+  </channel>
+</rss>

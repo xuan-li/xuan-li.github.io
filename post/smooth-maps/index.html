@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Smooth Maps |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/smooth-maps/">Smooth Maps</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Dec 19, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <h3 id="smooth-maps">Smooth Maps</h3>
+<p>Smooth maps or functions are defined by coordinate representation.</p>
+<p><strong>Definition 1.</strong>  Let $M$ be a $n$-manifold and $N$ be a $m$-manifold. $F$ is a smooth map from $M$ to $N$ if $\forall p\in M$, if there is some chart $(U, \phi)$ of $M$ and some chart $(V, \psi)$ of $N$ such that $p\in U$, $F(p) \in V$ and $\hat{F} = \psi\circ F \circ \psi^{-1}$ is a smooth map from $\phi(U)$ to $\psi(V)$.</p>
+<p>Smoothness of maps is a local property:</p>
+<p><strong>Proposition 1.</strong> $F$ is smooth if and only if its restriction on any open subset $U$ $F|_U$ is smooth.</p>
+<p>This leads to the gluing lemma for smooth maps:</p>
+<p><strong>Corollary 1 (Gluing Lemma for Smooth Maps).</strong>
+Let $\{U _\alpha\}$ be an open cover of $M$, and $F _\alpha$ is a smooth map defined on $U _\alpha$ which satisfies $\forall \alpha, \beta, F _\alpha | _{U _\alpha\cap U _\beta} = F _\beta | _{U _\alpha\cap U _\beta}$, then there exists an unique smooth map $F$ defined on $M$ such that $F| _{U _\alpha} = F _\alpha, \forall \alpha$.</p>
+<p>Here is an equivalent defintion of smooth maps:</p>
+<p><strong>Proposition 2.</strong> If for every $p \in M$, there exist smooth charts $(U, \phi)$ containing $p$ and $(V, \psi)$ containing $F(p)$, such that $U \cap F^{-1}(V)$ is open in $M$ and $\hat{F}$ is a smooth map from $\phi(U \cap F^{-1}(V))$ to $\psi(V)$, then $F$ is smooth.</p>
+<p>The condition $U \cap F^{-1}(V)$ is open cannot be omitted. This guarantee that $F$ is a continous map. See the following counter-example:</p>
+<p>$$
+\begin{equation}f(x) =
+\begin{cases}
+0, x&lt;0;\cr
+1, x\ge 0;
+\end{cases}
+\end{equation}
+$$
+This map satisfies $\hat{f}$ is a smooth map from $\phi(U \cap f^{-1}(V))$ to $\psi(V)$, but is not even continous.</p>
+<hr>
+<h3 id="diffeomorphisms">Diffeomorphisms</h3>
+<p>A kind of geometry can be treated as the study of invariance under some class of maps. For smooth manifolds, we study diffeomorphisms and their invariance. Two smooth manifolds are indistinguishable if they are related by some diffeomorphism.</p>
+<p><strong>Definition 2.</strong>
+A diffeomorphism from $M$ to $N$ is a smooth bijective map that has a smooth inverse.</p>
+<p>Some diffeomorphism invariance:</p>
+<p><strong>Theorem 1 (Diffeomorphism Invariance of Dimension)</strong> If $M$ is diffeomorphic to $N$, then $dim(M) = dim(N)$.</p>
+<p><em>Proof.</em> Assume $F: M\rightarrow N$ is a diffeomorphism, then $\hat{F}$ is a diffeomorphism from an open set in $\mathbb{R}^{dim(M)}$ to $\mathbb{R}^{dim(N)}$, which means $dim(M) = dim(N)$.</p>
+<p><strong>Theorem 2 (Diffeomorphism Invariance of Boundary)</strong> If $M$ is diffeomorphic to $N$ with a diffeomorphism $F$, then $F(\partial M) = \partial N$ and $F(\text{Int}M) = \text{Int}N$</p>
+<p><strong>Lemma 1 (Inverse Function Theorem).</strong>
+Suppose $U$ and $V$ are open subsets in $\mathbb{R}^n$, and $F: U\rightarrow V$ is smooth. If $det(DF(a))\not =0$, then there exists open $U_0 \subset U$ containing $a$ and open $V_0 \subset V$ containing $b$ such that $F| _{U_0}$ is a diffeomorphism from $U_0$ to $V_0$</p>
+<p><strong>Lemma 2.</strong> Let $F: U\subset \mathbb{R}^n\rightarrow\mathbb{R}^m$ be a smooth map. If $det(DF)\not=0$ at all points of $U$. Then $F$ is open.</p>
+<p><em>Proof of theorem 2.</em>
+If $F$ map a boundary chart $(U, \phi)$ to a interior chart $(V, \psi)$, then $\hat{F}\circ \hat{F} ^{-1} = Id _{\psi(V)}$, which means $D \hat{F}^{-1}$ is invertable. So  $\hat{F}^{-1}$ is an open map. This contradict with that $\phi(U)$ is subset of $\mathbb{H}^n$ containing some part of its boundary.</p>
+<hr>
+<h3 id="partitions-of-unity">Partitions of Unity</h3>
+<p><strong>Definition 3.</strong> Let $\mathcal{X} = \{X _\alpha\} _{\alpha \in A}$ be an open cover of $M$. A partition of unity subordinate to $\mathcal{X}$ is an indexed family $(\psi _\alpha) _{\alpha \in A}$ of continous functions from $M$ to $\mathbb{R}$ with the properties:</p>
+<ul>
+<li>$0\le \psi _\alpha(x)\le 1$</li>
+<li>$\text{supp}; \psi _\alpha \subset X _\alpha$</li>
+<li>$\cup _\alpha \text{supp}; \psi _\alpha$ is locally finite.</li>
+<li>$\sum _\alpha \psi _\alpha(x) = 1$</li>
+</ul>
+<p><strong>Theorem 3.</strong> For any open cover $\mathcal{X} = \cup _\alpha X _\alpha$ of $M$, there exists a smooth parition of unity subordinate to $\mathcal{X}$.</p>
+<p><strong>Lemma 3.</strong> Let
+$f(t) = \begin{cases}e ^{-\frac{1}{t}}, &amp;t&gt;0\cr 0, &amp; t\le 0\end{cases}$. Define $h(t) = \frac{f(r_2 - t)}{f(r_2-t) + f(t-r_1)}$ and $H(x) = h(|x|)$ on $\mathbb{R}^n$, then $$H(x) \begin{cases}=1 , &amp;|x|\le r_1\cr \in (0,1), &amp;r_1 &lt;|x| &lt; r_2 \cr = 0, &amp;|x|\ge r_2\end{cases}$$</p>
+<p><em>Proof of theorem 3.</em> Each $X_\alpha$ is a smooth manifold, so it has a basis  $\mathcal{B} _\alpha$ of regular coordinate balls. $\cup _\alpha \mathcal{B} _\alpha$ is a basis of $M$. Since manifolds are paracompact, so $\mathcal{X}$ has a locally finite open refinement $\mathcal{B}$ consisting elements in $\cup _\alpha \mathcal{B} _\alpha$. For each $B_i \in \mathcal{B} \subset X _\alpha$, we can find a chart $(B_i', \phi_i')$ such that $B_i'\in X _\alpha$, $\phi_i'(\overline{B_i}) = \overline{B _{r_i}}$ since $B_i$ is a regular coordinate ball. Define $$f_i = \begin{cases}H_i \circ \phi_i,; B_i'\cr
+0,; X _\alpha \setminus B_i\end{cases}$$
+where $H_i$ is positive in and only in $B _{r_i}$. So on the overlap, two definitions are both zero. Define $f = \sum _{i} f_i$ and $g_i = \frac{f_i}{f}$. Note that each $p\in M$ belongs to some $B_i$, so $f&gt;0$ all the time. And $\sum_i {g_i} = 1$. Now rearrage $\{g_i\}$ and define $\psi _\alpha = \sum _{i: B_i \subset X _\alpha} g_i$. Now we only need to verify $\text{supp} \ \psi _\alpha \subset X _\alpha$ and local finiteness. It is because $\{\overline{B_i}\}$ preseves the local finiteness of $\{ B_i\}$, and $\overline{\cup B_i} = \cup \overline{B_i}$.</p>
+<p><strong>Corollary 1 (Existence of Smooth Bump Functions).</strong> If $A$ closed, $U$ open and $A\subset U\subset M$, then there is a smooth bump function for $A$ supported in $U$.</p>
+<p><em>Proof.</em> $\{U, M\setminus A\}$ is a open cover of $M$, so we can find a partition of unity $\{\psi_0, \psi_1\}$ such that $\psi_1 \equiv 0$ on $A$. So $\psi_0 \equiv 1$ on $A$ and $\text{supp}\ \psi_0 \in U$.</p>
+<p>A smooth function on a closed set is defined as a function that can be smoothly extended to a neighborhood of every point of that closed set. The following corollary states that this function can be globally extended to any open set containing that closed set.</p>
+<p><strong>Corollary 2 (Extension Lemma of Smooth Functions)</strong> If f is smooth function on some closed set $A\subset M$, then for every open $U$ containing $A$, $f$ has an extension which is supported in $U$.</p>
+<p><em>Proof.</em> Smoothness of $f$ means that for any $p \in A$, there is a neighborhood $W_p\subset U$ and a smooth function $\tilde{f_p}$ such that $\tilde{f_p}$ agrees with $f$ on $W_p \cap A$. All $W_p$ and $M\setminus A$ is an open cover of $M$, so there exists a partition of unity indexed by $p\in A$ and $0$. $\psi_0 \equiv 0$ on $A$, so $\sum _{p\in A} \psi _p = 1$ on $A$. Define $\tilde{f} = \sum _{p\in A} \psi_p \tilde{f_p}$, then $\tilde{f}$ is a extension of $f$. On the other hand, $\text{supp } \tilde{f} \subset \overline{\cup_p \text{supp } \tilde{f_p}} =\cup_p \text{supp } \tilde{f_p} \subset U$.</p>
+<hr>
+<h3 id="reference">Reference</h3>
+<p><a href="http://www.springer.com/us/book/9781441999818">Introduction to Smooth Manifolds</a></p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/properties-of-manifolds/">Properties of Manifolds</a></li>
+        
+            <li><a href="/post/chinese-remainder/">Chinese Remainder Theorem and Square Roots Under Modulo</a></li>
+        
+            <li><a href="/post/convergence-of-series/">Convergence of Series</a></li>
+        
+            <li><a href="/post/sums/">Sums</a></li>
+        
+            <li><a href="/post/repertoire-method/">Repertoire Method</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

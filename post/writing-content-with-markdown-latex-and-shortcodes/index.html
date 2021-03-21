@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Writing content with Markdown, LaTeX, and Shortcodes |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/writing-content-with-markdown-latex-and-shortcodes/">Writing content with Markdown, LaTeX, and Shortcodes</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Apr 17, 2016
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/tutorial">Tutorial</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <p>Content can be written using <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX math</a>, and <a href="http://gohugo.io/extras/shortcodes/">Hugo Shortcodes</a>. Additionally, HTML may be used for advanced formatting.</p>
+<p>This article gives an overview of the most common formatting options.</p>
+<!-- raw HTML omitted -->
+<h2 id="sub-headings">Sub-headings</h2>
+<pre><code>## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+<h2 id="emphasis">Emphasis</h2>
+<pre><code>Italics with *asterisks* or _underscores_.
+
+Bold with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough with ~~two tildes~~.
+</code></pre>
+<h2 id="ordered-lists">Ordered lists</h2>
+<pre><code>1. First item
+2. Another item
+</code></pre>
+<h2 id="unordered-lists">Unordered lists</h2>
+<pre><code>* First item
+* Another item
+</code></pre>
+<h2 id="images">Images</h2>
+<p>Images may be added to a page by placing them in your <code>static/img/</code> folder and referencing them using one of the following two notations:</p>
+<p>A general image:</p>
+<pre><code>![alternative text for search engines](/img/screenshot.png)
+</code></pre>
+<p>A numbered figure with caption:</p>
+<pre><code>{{&lt; figure src=&quot;/img/screenshot.png&quot; title=&quot;Figure Caption&quot; &gt;}}
+</code></pre>
+<h2 id="links">Links</h2>
+<pre><code>[I'm a link](https://www.google.com)
+[A post]({{&lt; ref &quot;post/hi.md&quot; &gt;}})
+[A publication]({{&lt; ref &quot;publication/hi.md&quot; &gt;}})
+[A project]({{&lt; ref &quot;project/hi.md&quot; &gt;}})
+[Another section]({{&lt; relref &quot;hi.md#who&quot; &gt;}})
+</code></pre>
+<p>To enable linking to a file, such as a PDF, first place the file in your <code>static/files/</code> folder and then link to it using the following form:</p>
+<pre><code>{{% staticref &quot;files/cv.pdf&quot; %}}Download my CV{{% /staticref %}}
+</code></pre>
+<h2 id="emojis">Emojis</h2>
+<p>See the <a href="http://www.webpagefx.com/tools/emoji-cheat-sheet/">Emoji cheat sheet</a> for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:</p>
+<pre><code>I : heart : Academic : smile :
+</code></pre>
+<p>I :heart: Academic :smile:</p>
+<h2 id="blockquote">Blockquote</h2>
+<pre><code>&gt; This is a blockquote.
+</code></pre>
+<blockquote>
+<p>This is a blockquote.</p>
+</blockquote>
+<h2 id="footnotes">Footnotes</h2>
+<pre><code>I have more [^1] to say.
+
+[^1]: Footnote example.
+</code></pre>
+<p>I have more <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to say.</p>
+<h2 id="code-highlighting">Code highlighting</h2>
+<p>Pass the <em>language</em> of the code, such as <code>python</code>, as a parameter after three backticks:</p>
+<pre><code>```python
+# Example of code highlighting
+input_string_var = input(&quot;Enter some data: &quot;)
+print(&quot;You entered: {}&quot;.format(input_string_var))
+```
+</code></pre>
+<p>Result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Example of code highlighting</span>
+input_string_var <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter some data: &#34;</span>)
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;You entered: {}&#34;</span><span style="color:#f92672">.</span>format(input_string_var))
+</code></pre></div><h3 id="highlighting-options">Highlighting options</h3>
+<p>The Academic theme uses <a href="https://highlightjs.org">highlight.js</a> for source code highlighting, and highlighting is enabled by default for all pages. However, several configuration options are supported that allow finer-grained control over highlight.js.</p>
+<p>The following table lists the supported options for configuring highlight.js, along with their expected type and a short description. A &ldquo;yes&rdquo; in the <strong>config.toml</strong> column means the value can be set globally in <code>config.toml</code>, and a &ldquo;yes&rdquo; in the <strong>preamble</strong> column means that the value can be set locally in a particular page&rsquo;s preamble.</p>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>type</th>
+<th>description</th>
+<th>config.toml</th>
+<th>preamble</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>highlight</code></td>
+<td>boolean</td>
+<td>enable/disable highlighting</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>highlight_languages</code></td>
+<td>slice</td>
+<td>choose additional languages</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>highlight_style</code></td>
+<td>string</td>
+<td>choose a highlighting style</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h4 id="option-highlight">Option <code>highlight</code></h4>
+<p>The <code>highlight</code> option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified <code>highlight = true</code>. That is, the highlight.js javascript and css files will be included in every page. If you&rsquo;d like to only include highlight.js files on pages that actually require source code highlighting, you can set <code>highlight = false</code> in <code>config.toml</code>, and then override it by setting <code>highlight = true</code> in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of <code>highlight</code> set in <code>config.toml</code> and/or the page&rsquo;s preamble.</p>
+<table>
+<thead>
+<tr>
+<th>config.toml</th>
+<th>page preamble</th>
+<th>highlighting enabled for page?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unset or true</td>
+<td>unset or true</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>unset or true</td>
+<td>false</td>
+<td>no</td>
+</tr>
+<tr>
+<td>false</td>
+<td>unset or false</td>
+<td>no</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="option-highlight_languages">Option <code>highlight_languages</code></h4>
+<p>The <code>highlight_languages</code> option allows you to specify additional languages that are supported by highlight.js, but are not considered &ldquo;common&rdquo; and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set <code>highlight_languages = [&quot;go&quot;, &quot;clojure&quot;]</code> in <code>config.toml</code>. If, on the other hand, you want to enable a language only for a specific page, you can set <code>highlight_languages</code> in that page&rsquo;s preamble.</p>
+<p>The <code>highlight_languages</code> options specified in <code>config.toml</code> and in a page&rsquo;s preamble are additive. That is, if <code>config.toml</code> contains, <code>highlight_languages = [&quot;go&quot;]</code> and the page&rsquo;s preamble contains <code>highlight_languages = [&quot;ocaml&quot;]</code>, then javascript files for <em>both</em> go and ocaml will be included for that page.</p>
+<p>If the <code>highlight_languages</code> option is set, then the corresponding javascript files will be served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. To see a list of available languages, visit the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs page</a> and search for links with the word &ldquo;languages&rdquo;.</p>
+<p>The <code>highlight_languages</code> option provides an easy and convenient way to include support for additional languages to be severed from a CDN.</p>
+<h4 id="option-highlight_style">Option <code>highlight_style</code></h4>
+<p>The <code>highlight_style</code> option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set <code>highlight_style = &quot;solarized-dark&quot;</code> in <code>config.toml</code>.</p>
+<p>If the <code>highlight_style</code> option is unset, the default is to use the file <code>/css/highlight.min.css</code>, either the one provided by the Academic theme, or else the one in your local <code>static</code> directory.  The <code>/css/highlight.min.css</code> file provided by Academic is equivalent to the <code>github</code> style from highlight.js.</p>
+<p>If the <code>highlight_style</code> option <em>is</em> set, then <code>/css/highlight.min.css</code> is ignored, and the corresponding css file will be served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. To see a list of available styles, visit the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs page</a> and search for links with the word &ldquo;styles&rdquo;.</p>
+<p>See the <a href="https://highlightjs.org/static/demo/">highlight.js demo page</a> for examples of available styles.</p>
+<!-- raw HTML omitted -->
+<p>Not all styles listed on the <a href="https://highlightjs.org/static/demo/">highlight.js demo page</a> are available from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. If you want to use a style that is not served by cdnjs, just leave <code>highlight_style</code> unset, and place the corresponding css file in <code>/static/css/highlight.min.css</code>.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>If you don&rsquo;t want to change the default style that ships with Academic but you do want the style file served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>, set <code>highlight_style = &quot;github&quot;</code> in <code>config.toml</code>.</p>
+<!-- raw HTML omitted -->
+<p>The <code>highlight_style</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_style</code> in your page&rsquo;s preamble has no effect.</p>
+<h2 id="twitter-tweet">Twitter tweet</h2>
+<p>To include a single tweet, pass the tweet’s ID from the tweet&rsquo;s URL as parameter to the shortcode:</p>
+<pre><code>{{&lt; tweet 666616452582129664 &gt;}}
+</code></pre>
+<h2 id="youtube">Youtube</h2>
+<pre><code>{{&lt; youtube w7Ft2ymGmfc &gt;}}
+</code></pre>
+<h2 id="vimeo">Vimeo</h2>
+<pre><code>{{&lt; vimeo 146022717 &gt;}}
+</code></pre>
+<h2 id="github-gist">GitHub gist</h2>
+<pre><code>{{&lt; gist USERNAME GIST-ID  &gt;}}
+</code></pre>
+<h2 id="speaker-deck">Speaker Deck</h2>
+<pre><code>{{&lt; speakerdeck 4e8126e72d853c0060001f97 &gt;}}
+</code></pre>
+<h2 id="rm-latex-math">$\rm \LaTeX$ math</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TeX" data-lang="TeX"><span style="color:#e6db74">$$</span>\left <span style="color:#f92672">[</span> – \frac{\hbar^<span style="color:#ae81ff">2</span>}{<span style="color:#ae81ff">2</span> m} \frac{\partial^<span style="color:#ae81ff">2</span>}{\partial x^<span style="color:#ae81ff">2</span>} <span style="color:#f92672">+</span> V \right <span style="color:#f92672">]</span> \Psi <span style="color:#f92672">=</span> i \hbar \frac{\partial}{\partial t} \Psi<span style="color:#e6db74">$$</span>
+</code></pre></div><p>$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</p>
+<p>Alternatively, inline math can be written by wrapping the formula with only a single <code>$</code>:</p>
+<pre><code>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+</code></pre>
+<p>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</p>
+<h2 id="table">Table</h2>
+<p>Code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Markdown" data-lang="Markdown">| Command           | Description                    |
+| ------------------| ------------------------------ |
+| <span style="color:#e6db74">`hugo`</span>            | Build your website.            |
+| <span style="color:#e6db74">`hugo serve -w`</span>   | View your website.             |
+</code></pre></div><p>Result:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hugo</code></td>
+<td>Build your website.</td>
+</tr>
+<tr>
+<td><code>hugo serve -w</code></td>
+<td>View your website.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="alerts">Alerts</h2>
+<p>Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:</p>
+<pre><code>{{% alert note %}}
+Here's a tip or note...
+{{% /alert %}}
+</code></pre>
+<p>This will display the following <em>note</em> block:</p>
+<!-- raw HTML omitted -->
+<p>Here&rsquo;s a tip or note&hellip;</p>
+<!-- raw HTML omitted -->
+<pre><code>{{% alert warning %}}
+Here's some important information...
+{{% /alert %}}
+</code></pre>
+<p>This will display the following <em>warning</em> block:</p>
+<!-- raw HTML omitted -->
+<p>Here&rsquo;s some important information&hellip;</p>
+<!-- raw HTML omitted -->
+<h2 id="table-of-contents">Table of Contents</h2>
+<p>A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the <code>{{% toc %}}</code> shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Footnote example. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>

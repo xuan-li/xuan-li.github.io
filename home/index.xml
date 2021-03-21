@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Xuan LI - UPenn</title>
+    <link>http://xuan-li.github.io/home/</link>
+    <description>Recent content in Homes on Xuan LI - UPenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Sep 2017 00:00:00 -0700</lastBuildDate><atom:link href="http://xuan-li.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://xuan-li.github.io/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xuan-li.github.io/home/experience/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/experience/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xuan-li.github.io/home/personal/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/personal/</guid>
+      <description>The pronunciation of my name is like &amp;ldquo;Shayne Lee&amp;rdquo; in English. I love modern origami art because of the mathematical theory behind the origami design (Tree Theory). I was the president of Tsinghua Origami Club in 2014-2015. I started self-studying fingerstyle Ukelele one year ago. It’s my new hobby now. I love reading science books and articles. I interned at Global Science Magazines Co., Ltd. (Chinese edition of Scientific American) for my whole undergraduate years as a science translator and an intern team leader.</description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>http://xuan-li.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>http://xuan-li.github.io/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>http://xuan-li.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://xuan-li.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuan-li.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

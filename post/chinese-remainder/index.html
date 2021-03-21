@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<link rel="stylesheet" href="/css/atom.css" type="text/css">
+ 
+ <link rel="icon" type="image/png" href="/img/favicon.png">
+ 
+ 
+<title> Chinese Remainder Theorem and Square Roots Under Modulo |  Xuan LI - UPenn</title>
+<script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();   
+        });
+</script>
+</head>
+
+<body id="top" data-spy="scroll">
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  
+  
+    <ul class="navbar-nav">
+      
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#bio">Bio</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#publication">Publications</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#experience">Experiences</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#project">Projects</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/post">Posts</a>
+        
+      </li>
+      
+      <li class="nav-item active">
+        
+        <a class="nav-link"  href="http://xuan-li.github.io/#personal">Personal</a>
+        
+      </li>
+      
+    </ul>
+
+  
+</nav>
+
+     
+
+    <div class="container">
+       
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+          <div id="container">
+          
+<header>
+    <h2 class="blog-post-title " >
+        <a class="text-dark" href="/post/chinese-remainder/">Chinese Remainder Theorem and Square Roots Under Modulo</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Nov 7, 2017
+    
+    
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    
+    
+        <a class="badge badge-primary" href="/tags/math">Math</a>
+    
+</div>
+
+    
+    <hr>
+</header>
+<article class="post-content">
+    <p><strong>Theorem (Chinese Remainder Theorem).</strong>
+Let $m_1, m_2, &hellip;, m_n\in \mathbb{Z}^+$ be pairwise relatively prime. The system
+$$x \equiv a_k \pmod {m_k}$$
+has a unique solution modulo $M = m_1m_2&hellip;m_n.$</p>
+<hr>
+<h3 id="group-of-inversable-residue-number">Group of Inversable Residue Number</h3>
+<p><strong>Definition.</strong> $\mathbb{Z}_n^* = \{m\in\mathbb{Z}_n| m\perp n\}$</p>
+<p><strong>Proposition.</strong> $\mathbb{Z}_n^*$ is a group under multiplication.</p>
+<p><em>Proof.</em> <!-- raw HTML omitted -->
+<strong>Closure.</strong> If $m&rsquo;m \equiv 1 \pmod n$, then $m&rsquo;m - kn = 1$, so $m', m \in \mathbb{Z} _n ^*$. And if $m_1, m_2 \perp n$, then $m_1 m_2 \perp n$, so $m_1 m_2 \in \mathbb{Z} _n ^ *$ <!-- raw HTML omitted -->
+<strong>Inversability.</strong>
+By Fermat' little theorem, we know that for any $m$ such that $m\perp n$, $m\cdot m ^{\phi(n)-1} \equiv 1 \pmod n$. On the other hand, there exists $m',n'$ such that $m&rsquo;m + n&rsquo;n = 1$, so $m&rsquo;m \equiv 1 \pmod n$. Those two ways both give the existence of inversion. <!-- raw HTML omitted -->
+<strong>Uniqueness</strong>
+If $m_1m \equiv 1 \pmod n$, $m_2 m\equiv 1 \pmod n$, then $m_1 - m_2 \equiv 0 \mod n$.</p>
+<p><strong>Corollary.</strong> If $a \perp n$ then $ax \equiv b \pmod n$ has a unique solution $x \equiv a^{-1}b$.</p>
+<hr>
+<p><strong>Proof of Chinese Remainder Theorem.</strong>
+Chinese Remainder Theorem is equivalent to $\mathbb{Z}_M \cong \mathbb{Z} _{m_1} \bigoplus \mathbb{Z} _{m_2} &hellip; \bigoplus \mathbb{Z} _{m_k}$.<!-- raw HTML omitted -->
+We define a map $x\ mod\ M \rightarrow Res(x) = (x \ mod\ m_1, x\ mod\ m_2, &hellip;, x\ mod \ m_k),$ which is a homomorphism between two groups. We need to prove this map is bijective. And it&rsquo;s sufficient to prove this has an inversion<!-- raw HTML omitted -->
+$\mathbb{Z} _{m_1} \bigoplus \mathbb{Z} _{m_2} &hellip; \bigoplus \mathbb{Z} _{m_k}$ is actually a linear space, whose basis is $\{(1,0,&hellip;,0), (0, 1, 0,&hellip;,0), &hellip; (0,&hellip;,0,1)\}$. We want to find the preimage of every element of the basis.<!-- raw HTML omitted -->
+Assume we want to find the preimage of $(0, &hellip;,0,1,0,&hellip;,0)$, where $1$ is at $i^{th}$ position. This equivalent to solve:
+$$
+\begin{equation}
+\begin{cases}
+x \equiv 0 \pmod{m_1}\cr
+&hellip;\cr
+x\equiv 1 \pmod{m_i}\cr
+&hellip;\cr
+x\equiv 0 \pmod {m_k}\cr
+\end{cases}
+\end{equation}
+$$
+This is equivalent to solve $$\frac{M}{m_i}y  \equiv 1 \pmod{m_i} $$ where $x \equiv \frac{M}{m_i}y \pmod M$ is the solution to original system. We already know $y$ exists and is unique because $\frac{M}{m_i} \perp m_i$. <!-- raw HTML omitted -->
+Assume the the preimage of the basis is $\{x_1 \ mod\ M, &hellip;, x_k\ mod\ M\}$. Then given $(a_1, &hellip;, a_k)$, the preimage is $x \equiv \sum _{i=1} ^k a_i x_i \pmod M$, which is well-defined.</p>
+<hr>
+<h3 id="square-roots-under-modulo">Square Roots Under Modulo.</h3>
+<p>Assume $a \perp n$, we want to solve $x^2 \equiv a \pmod n$.</p>
+<p>Assume $n = p_1 ^{n_1} p_2^{n_2}&hellip;p_k ^{n_k}$. By Chinese remainder theorem. This equation is equivalent to the following system:
+$$
+\begin{equation}
+\begin{cases}
+x^2 \equiv a \pmod {p_1^{n_1}}\cr
+&hellip;\cr
+x^2 \equiv a \pmod {p_k ^{n_k}}
+\end{cases}
+\end{equation}
+$$</p>
+<p>So we need only to worry about $x^2 \equiv a \pmod {p^n}$, where $a\perp p$.</p>
+<p><strong>Case 1: p is odd.</strong><!-- raw HTML omitted -->
+Assume $x^2 \equiv y^2 \equiv a \pmod {p^n} $. Then $p^n \mid (x-y)(x+y)$. We want to show $p^n$ only divides one of $(x-y)$ and $(x+y)$.<!-- raw HTML omitted -->
+If $p^n$ doesn&rsquo;t divide any of them or divides them both, then $p$ must divides them both. Then $p$ divides their sum and difference $2x$ and $2y$, which means $p$ divides $x$ and $y$. So $p \mid x^2 \equiv a$, which is contradictory  with the assumption $p\perp a$.<!-- raw HTML omitted -->
+So $p^n | x-y$ or $p^n | x+y$, which means once we have a solution $x$, $-x$ must be another solution.</p>
+<p><strong>Case 2: p = 2.</strong><!-- raw HTML omitted -->
+By checking one by one, we know that <!-- raw HTML omitted -->
+$x^2 \equiv a \pmod 2$ have 1 solution when $a\equiv 1 \pmod 2$: $x \equiv 1 \pmod 2$;<!-- raw HTML omitted -->
+$x^2 \equiv b \pmod 4$ have 2 solutions when $a \equiv 1 \pmod 4$: $x\equiv \pm 1 \pmod 4$.<!-- raw HTML omitted -->
+$x^2 \equiv a \pmod 8$ have 4 solutions when $a \equiv 1 \pmod 8$: $x\equiv 1,3,5, 7\pmod 8$.<!-- raw HTML omitted -->
+When $n&gt;3$, if $x^2 \equiv y^2 \pmod{2^n}$, then $2^n \mid (x-y)(x+y)$. Not like the case $p$ is odd, we want to show $2^{n-1}$ divides only one of $(x+y)(x-y)$, because they are both even. If 4 divides both, then 4 divides $2x$, but $x$ must be odd since $a$ is odd, which is contradictory. So one of them has only one 2 in its factors, and the other must has at least $(n-1)$ 2s in its factors. This proves that $x\equiv y \pmod {2^{n-1}}$ or $x\equiv -y\pmod {2^{n-1}}$.
+Then if $x = x_0$ is a solution, then there three other solutions: $x \equiv - x_0, x \equiv x_0 + 2^{n-1}, x\equiv - x_0 + 2^{n-1}  \pmod {2^n}$.</p>
+<p>If $\gcd(a, n) \not = 1$. Assume $a = p^r A$, where $A\perp p$.<!-- raw HTML omitted -->
+If $r = n$, we need to solve $x^2 \equiv 0 \pmod {p^n}$. So if $n = 2m - 1$ or $2m$, the solution is $x\equiv 0 \pmod {p^m}$.<!-- raw HTML omitted -->
+If $r\not = n$, assume $x = p^m X$ and $X\perp p$, so $r$ must equal to $2m$. And we only need to solve $X^2\equiv A \pmod{p^{n-m}}$, where $A\perp p$.
+(<a href="https://www.numbertheory.org/php/squareroot.html">https://www.numbertheory.org/php/squareroot.html</a>)</p>
+
+    
+
+    <h4>related</h4>
+    <ul>
+        
+            <li><a href="/post/convergence-of-series/">Convergence of Series</a></li>
+        
+            <li><a href="/post/sums/">Sums</a></li>
+        
+            <li><a href="/post/repertoire-method/">Repertoire Method</a></li>
+        
+    </ul>
+
+
+</article>
+
+          </div>
+        </div>
+        
+        
+<aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    <div id="container">
+    
+        
+
+
+<section>
+    <h4>recentPosts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/autoencoder_review/">Literature Review on Autoencoders</a>
+        </li>
+        
+        <li>
+            <a href="/post/group-theory/">Group Theory</a>
+        </li>
+        
+        <li>
+            <a href="/post/differentials-of-smooth-maps/">Differentials of Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/smooth-maps/">Smooth Maps</a>
+        </li>
+        
+        <li>
+            <a href="/post/properties-of-manifolds/">Properties of Manifolds</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/machine-learning">machine-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/math">math</a>
+            
+            <a class="badge badge-primary" href="/tags/tutorial">tutorial</a>
+            
+        </p>
+        
+    
+</section>
+    
+    </div>
+</aside>
+
+        
+      </div>
+      
+    </div>
+    
+
+</body>
+<footer>
+
+    <br>
+    <div class="box" style="width:100%; background:#f8f9fa;"> 
+      <div class="container" style="text-align: center; color:#00000056;">
+          <small><p>This website is designed by Xuan Li and his wife Pingying Chen.</p>
+          <p>Copyright &copy; 2017-2021 Xuan Li &amp; Pingying Chen. All rights reserved.</p> 
+          <p>Last updated: Mar 2021</p></small>
+      </div>
+    </div>
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162689537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162689537-1');
+</script>
+
+
+</footer>
+</html>
